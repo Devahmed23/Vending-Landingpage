@@ -102,7 +102,7 @@ export default function LandingPage() {
     alt="Vending machine"
     width={1000}
     height={800}
-    className="absolute top-30 z-0 scale-200 blur-[1px]"
+    className="absolute top-25 z-0 scale-160 blur-[1px]"
   />
   {/* LEFT MOCKUP */}
   <Image
@@ -110,7 +110,7 @@ export default function LandingPage() {
     alt="Analytics Screen"
     width={260}
     height={520}
-    className="absolute left-[-50px] top-[150px] z-0 opacity-100 scale-80 rotate-[-12deg] blur-[0px]"
+    className="absolute left-[-30px] top-[150px] z-0 opacity-100 scale-80 rotate-[-12deg] blur-[0px]"
   />
 
   {/* RIGHT MOCKUP */}
@@ -119,10 +119,8 @@ export default function LandingPage() {
     alt="Inventory Screen"
     width={260}
     height={520}
-    className="absolute right-[-50px] top-[150px] z-0 opacity-100 scale-80 rotate-[12deg] blur-[0px]"
+    className="absolute right-[-30px] top-[150px] z-0 opacity-100 scale-80 rotate-[12deg] blur-[0px]"
   />
-
-
 
   {/* MAIN PHONE (FOCUS) */}
   <Image
