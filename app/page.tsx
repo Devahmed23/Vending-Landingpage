@@ -149,12 +149,34 @@ export default function LandingPage() {
 
           {/* Mobile mockup */}
           <div className="flex md:hidden justify-center pb-10 overflow-hidden">
-            <div className="relative w-[260px] h-[420px]">
+            <div className="relative w-full max-w-[390px] h-[430px] overflow-visible">
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="w-[300px] h-[300px] bg-gradient-to-br from-[#1583F1]/20 to-[#81E8C4]/20 blur-3xl rounded-full" />
+                <div className="w-[320px] h-[320px] bg-gradient-to-br from-[#1583F1]/20 to-[#81E8C4]/20 blur-3xl rounded-full" />
               </div>
-              <Image src="/mockup.png" alt="VendSavvy App" width={260} height={420} priority
-                className="relative z-10 drop-shadow-2xl" />
+              <Image
+                src="/iPhone 18.png"
+                alt="Analytics Screen"
+                width={180}
+                height={360}
+                priority
+                className="absolute left-0 bottom-8 w-[118px] h-auto rotate-[-12deg] drop-shadow-xl opacity-90"
+              />
+              <Image
+                src="/mockup.png"
+                alt="VendSavvy App"
+                width={260}
+                height={420}
+                priority
+                className="absolute left-1/2 bottom-0 z-10 w-[212px] h-auto -translate-x-1/2 drop-shadow-2xl"
+              />
+              <Image
+                src="/iPhone 17.png"
+                alt="Inventory Screen"
+                width={180}
+                height={360}
+                priority
+                className="absolute right-0 bottom-8 w-[118px] h-auto rotate-[12deg] drop-shadow-xl opacity-90"
+              />
             </div>
           </div>
 
@@ -166,9 +188,9 @@ export default function LandingPage() {
             <Image src="/vending machine.png" alt="Vending machine" width={900} height={720}
               className="absolute top-0 left-1/2 -translate-x-1/2 z-0 scale-[1.25] opacity-55 select-none pointer-events-none" />
             <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-transparent to-background/30 z-[1] pointer-events-none" />
-            <Image src="/iphone 18.png" alt="Analytics Screen" width={240} height={480}
+            <Image src="/iPhone 18.png" alt="Analytics Screen" width={240} height={480}
               className="absolute left-0 bottom-[60px] z-[2] scale-[0.78] rotate-[-10deg] drop-shadow-xl opacity-90" />
-            <Image src="/iphone 17.png" alt="Inventory Screen" width={240} height={480}
+            <Image src="/iPhone 17.png" alt="Inventory Screen" width={240} height={480}
               className="absolute right-0 bottom-[60px] z-[2] scale-[0.78] rotate-[10deg] drop-shadow-xl opacity-90" />
             <Image src="/mockup.png" alt="Main App" width={480} height={660} priority
               className="relative z-[3] drop-shadow-2xl" />
