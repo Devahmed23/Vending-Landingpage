@@ -80,7 +80,7 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm transition-colors ${
+              className={`text-sm font-bold transition-colors ${
                 pathname === link.href
                   ? 'gradient-text font-semibold'
                   : 'text-foreground/70 hover:text-foreground'
@@ -131,7 +131,7 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm py-3 px-3 rounded-md transition-colors ${
+                className={`text-sm font-bold py-3 px-3 rounded-md transition-colors ${
                   pathname === link.href
                     ? 'gradient-text font-semibold bg-[#1583F1]/5'
                     : 'text-foreground/70 hover:text-foreground hover:bg-foreground/5'

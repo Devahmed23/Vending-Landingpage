@@ -91,7 +91,7 @@ export default function LandingPage() {
       <Navbar />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="relative px-6 md:px-12 pt-10 pb-0 md:pt-16 md:pb-0 overflow-hidden">
+      <section className="relative px-6 md:px-12 pt-10 pb-0 md:pt-16 md:pb-0 overflow-x-hidden overflow-y-visible">
         {/* Ambient brand blobs */}
         <div className="absolute inset-0 -z-10 pointer-events-none">
           <div className="absolute -top-20 -left-20 w-[560px] h-[560px] rounded-full bg-[#1583F1]/10 blur-[110px]" />
@@ -148,52 +148,79 @@ export default function LandingPage() {
           </div>
 
           {/* Mobile mockup */}
-          <div className="flex md:hidden justify-center pb-10 overflow-hidden">
-            <div className="relative w-full max-w-[390px] h-[430px] overflow-visible">
+          <div className="flex md:hidden justify-center pb-10 overflow-visible px-2">
+            <div className="relative w-full max-w-[390px] h-[420px] sm:h-[450px] overflow-visible">
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <div className="w-[320px] h-[320px] bg-gradient-to-br from-[#1583F1]/20 to-[#81E8C4]/20 blur-3xl rounded-full" />
               </div>
-              <Image
-                src="/iPhone 18.png"
-                alt="Analytics Screen"
-                width={180}
-                height={360}
-                priority
-                className="absolute left-0 bottom-8 w-[118px] h-auto rotate-[-12deg] drop-shadow-xl opacity-90"
-              />
-              <Image
-                src="/mockup.png"
-                alt="VendSavvy App"
-                width={260}
-                height={420}
-                priority
-                className="absolute left-1/2 bottom-0 z-10 w-[212px] h-auto -translate-x-1/2 drop-shadow-2xl"
-              />
-              <Image
-                src="/iPhone 17.png"
-                alt="Inventory Screen"
-                width={180}
-                height={360}
-                priority
-                className="absolute right-0 bottom-8 w-[118px] h-auto rotate-[12deg] drop-shadow-xl opacity-90"
-              />
+              <div className="absolute left-1 bottom-8 w-[118px] h-[236px] rotate-[-12deg]">
+                <Image
+                  src="/iPhone 18.png"
+                  alt="Analytics Screen"
+                  fill
+                  sizes="118px"
+                  className="object-contain drop-shadow-xl opacity-90"
+                />
+              </div>
+              <div className="absolute left-1/2 bottom-0 z-10 w-[212px] h-[342px] -translate-x-1/2">
+                <Image
+                  src="/mockup.png"
+                  alt="VendSavvy App"
+                  fill
+                  priority
+                  sizes="212px"
+                  className="object-contain drop-shadow-2xl"
+                />
+              </div>
+              <div className="absolute right-1 bottom-8 w-[118px] h-[236px] rotate-[12deg]">
+                <Image
+                  src="/iPhone 17.png"
+                  alt="Inventory Screen"
+                  fill
+                  sizes="118px"
+                  className="object-contain drop-shadow-xl opacity-90"
+                />
+              </div>
             </div>
           </div>
 
           {/* Desktop 3-phone + vending machine */}
-          <div className="hidden md:flex relative items-end justify-center h-[680px] w-full overflow-hidden">
+          <div className="hidden md:flex relative items-end justify-center h-[560px] lg:h-[640px] xl:h-[680px] w-full overflow-visible px-2 lg:px-0 translate-y-8 lg:translate-y-10">
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="w-[480px] h-[480px] bg-gradient-to-br from-[#1583F1]/15 to-[#81E8C4]/15 blur-3xl rounded-full" />
             </div>
             <Image src="/vending machine.png" alt="Vending machine" width={900} height={720}
+              sizes="(min-width: 1280px) 720px, (min-width: 1024px) 640px, 560px"
               className="absolute top-0 left-1/2 -translate-x-1/2 z-0 scale-[1.25] opacity-55 select-none pointer-events-none" />
             <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-transparent to-background/30 z-[1] pointer-events-none" />
-            <Image src="/iPhone 18.png" alt="Analytics Screen" width={240} height={480}
-              className="absolute left-0 bottom-[60px] z-[2] scale-[0.78] rotate-[-10deg] drop-shadow-xl opacity-90" />
-            <Image src="/iPhone 17.png" alt="Inventory Screen" width={240} height={480}
-              className="absolute right-0 bottom-[60px] z-[2] scale-[0.78] rotate-[10deg] drop-shadow-xl opacity-90" />
-            <Image src="/mockup.png" alt="Main App" width={480} height={660} priority
-              className="relative z-[3] drop-shadow-2xl" />
+            <div className="absolute left-2 lg:left-0 bottom-[60px] z-[2] w-[187px] h-[374px] rotate-[-10deg]">
+              <Image
+                src="/iPhone 18.png"
+                alt="Analytics Screen"
+                fill
+                sizes="187px"
+                className="object-contain drop-shadow-xl opacity-90"
+              />
+            </div>
+            <div className="absolute right-2 lg:right-0 bottom-[60px] z-[2] w-[187px] h-[374px] rotate-[10deg]">
+              <Image
+                src="/iPhone 17.png"
+                alt="Inventory Screen"
+                fill
+                sizes="187px"
+                className="object-contain drop-shadow-xl opacity-90"
+              />
+            </div>
+            <div className="relative z-[3] w-[360px] h-[495px] lg:w-[420px] lg:h-[578px] xl:w-[480px] xl:h-[660px]">
+              <Image
+                src="/mockup.png"
+                alt="Main App"
+                fill
+                priority
+                sizes="(min-width: 1280px) 480px, (min-width: 1024px) 420px, 360px"
+                className="object-contain drop-shadow-2xl"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -270,7 +297,7 @@ export default function LandingPage() {
               <Button variant="outline">Learn Our Story</Button>
             </Link>
           </FadeIn>
-          <StaggerContainer className="grid grid-cols-2 gap-4">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {audienceCards.map((item) => (
               <StaggerItem key={item.label}>
                 <m.div
@@ -295,7 +322,7 @@ export default function LandingPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Simple Pricing That Scales</h2>
             <p className="text-foreground/60">Start free. Upgrade when you&apos;re ready.</p>
           </FadeIn>
-          <StaggerContainer className="grid md:grid-cols-4 gap-5" staggerDelay={0.08}>
+          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" staggerDelay={0.08}>
             {pricingPlans.map((plan) => (
               <StaggerItem key={plan.name}>
                 <m.div
@@ -361,7 +388,7 @@ export default function LandingPage() {
       <section className="px-6 md:px-12 py-20 md:py-28"
         style={{ background: 'linear-gradient(160deg, rgba(21,131,241,0.04) 0%, rgba(129,232,196,0.07) 100%)' }}>
         <ScaleIn>
-          <div className="max-w-4xl mx-auto relative overflow-hidden rounded-3xl p-12 md:p-16 text-center"
+          <div className="max-w-4xl mx-auto relative overflow-hidden rounded-3xl p-8 sm:p-10 md:p-16 text-center"
             style={{ background: 'linear-gradient(135deg, #1270D0 0%, #1583F1 45%, #4BBFB0 100%)' }}>
             {/* Decorative blobs */}
             <div className="absolute top-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl pointer-events-none" />
@@ -378,15 +405,15 @@ export default function LandingPage() {
               <m.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
                 <Link href="/signup">
                   <Button size="lg"
-                    className="bg-white text-[#1583F1] hover:bg-white/90 shadow-[0_4px_20px_rgba(0,0,0,0.20)] hover:shadow-[0_6px_28px_rgba(0,0,0,0.25)] border-0">
+                    className="bg-white text-white hover:bg-white/90 shadow-[0_4px_20px_rgba(0,0,0,0.20)] hover:shadow-[0_6px_28px_rgba(0,0,0,0.25)] border-0">
                     Start Your Free Trial
                   </Button>
                 </Link>
               </m.div>
               <Link href="/pricing">
-                <Button size="lg"
-                  className="bg-white/10 text-white border border-white/30 hover:bg-white/20 hover:border-white/50 shadow-none">
-                  View Pricing
+                <Button size="lg" variant="outline"
+                  className="bg-white text-[#1583F1] border border-white/40 hover:bg-white hover:text-[#1583F1] shadow-none">
+                  <span className="gradient-text">View Pricing</span>
                 </Button>
               </Link>
             </div>
