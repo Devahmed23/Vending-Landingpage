@@ -91,7 +91,7 @@ export default function LandingPage() {
       <Navbar />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="relative px-6 md:px-12 pt-10 pb-0 md:pt-16 md:pb-0 overflow-x-hidden overflow-y-visible">
+      <section className="relative px-6 md:px-12 pt-10 pb-0 md:pt-16 md:pb-0 overflow-x-clip overflow-y-visible">
         {/* Ambient brand blobs */}
         <div className="absolute inset-0 -z-10 pointer-events-none">
           <div className="absolute -top-20 -left-20 w-[560px] h-[560px] rounded-full bg-[#1583F1]/10 blur-[110px]" />
