@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { Check, TrendingUp, AlertCircle, Zap, BarChart3, ArrowRight } from 'lucide-react';
+import { Check, TrendingUp, AlertCircle, Zap, BarChart3, ArrowRight, Users, Store, RefreshCcw } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { m } from 'framer-motion';
@@ -18,24 +18,29 @@ const metrics = [
 
 const featureCards = [
   {
+    icon: Users,
+    title: 'Simple setup designed for non-technical users',
+    description: 'Get started fast with a setup that is easy to understand and simple to use from day one.',
+  },
+  {
+    icon: Store,
+    title: 'Built specifically for vending, not generic retail',
+    description: 'Vend Savvy is shaped around vending workflows instead of broad retail assumptions.',
+  },
+  {
     icon: TrendingUp,
-    title: 'Track Every Dollar',
-    description: 'Know exactly how much each machine makes daily. Get detailed insights into your revenue streams.',
-  },
-  {
-    icon: AlertCircle,
-    title: 'Never Run Out of Products',
-    description: 'Get alerts when inventory is low and manage stock levels across all your machines in one place.',
-  },
-  {
-    icon: Zap,
-    title: 'Manage Multiple Machines',
-    description: 'See all machines, locations, and performance metrics in one dashboard. Scale without the stress.',
+    title: 'Real-time visibility into performance',
+    description: 'See what is working right now so you can act before small issues become bigger problems.',
   },
   {
     icon: BarChart3,
-    title: 'Understand Your Profit',
-    description: 'Built-in profit & loss reports to make smarter decisions about your vending business.',
+    title: 'Scales with your business as you grow',
+    description: 'Whether you manage a few machines or a large route, the platform grows with your operation.',
+  },
+  {
+    icon: RefreshCcw,
+    title: 'Replaces spreadsheets, guesswork, and disconnected systems',
+    description: 'Keep your sales, costs, inventory, and reporting in one place instead of scattered tools.',
   },
 ];
 
@@ -78,11 +83,12 @@ const pricingPlans = [
   },
 ];
 
-const audienceCards = [
-  { label: 'Solo Operators',       desc: 'Starting with 1–5 machines' },
-  { label: 'Growing Businesses',   desc: 'Scaling to 6–20 locations' },
-  { label: 'Enterprise Operators', desc: 'Managing 20+ machines' },
-  { label: 'Multi-Industry',       desc: 'Offices, schools, hospitals & more' },
+const whatWeDoPoints = [
+  'Track sales from every machine in real time',
+  'Manage inventory, restocking, and product performance',
+  'Log expenses, repairs, and operational costs',
+  'View profit & loss per machine, location, or route',
+  'Automate reporting so decisions are data-driven, not guesswork',
 ];
 
 export default function LandingPage() {
@@ -241,17 +247,25 @@ export default function LandingPage() {
       <section id="features" className="px-6 md:px-12 py-20 md:py-28 bg-white">
         <div className="max-w-6xl mx-auto">
           <FadeIn direction="up" className="text-center mb-16">
-            <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">Why VendSavvy</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Everything Your Business Needs</h2>
+            <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">Why Vend Savvy</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Everything Your Vending Business Needs</h2>
             <p className="text-foreground/60 max-w-xl mx-auto">
               One platform for everything — so you can focus on growing, not managing chaos.
             </p>
           </FadeIn>
           <StaggerContainer className="grid md:grid-cols-2 gap-6">
-            {featureCards.map((feature) => (
-              <StaggerItem key={feature.title}>
+            {featureCards.map((feature, idx) => {
+              const isLastOddCard = featureCards.length % 2 === 1 && idx === featureCards.length - 1;
+
+              return (
+              <StaggerItem
+                key={feature.title}
+                className={isLastOddCard ? 'md:col-span-2 md:flex md:justify-center' : ''}
+              >
                 <m.div
-                  className="group p-8 border border-border rounded-2xl bg-white cursor-default h-full relative overflow-hidden"
+                  className={`group p-8 border border-border rounded-2xl bg-white cursor-default h-full relative overflow-hidden ${
+                    isLastOddCard ? 'md:w-[calc(50%-0.75rem)]' : ''
+                  }`}
                   whileHover={{ y: -4, boxShadow: '0 20px 48px rgba(21,131,241,0.10)' }}
                   transition={{ duration: 0.2 }}
                 >
@@ -266,7 +280,8 @@ export default function LandingPage() {
                   <p className="text-foreground/60 text-sm leading-relaxed">{feature.description}</p>
                 </m.div>
               </StaggerItem>
-            ))}
+              );
+            })}
           </StaggerContainer>
           <FadeIn direction="up" delay={0.1} className="text-center mt-10">
             <Link href="/features">
@@ -276,41 +291,110 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── About / Who It's For ──────────────────────────────────────────── */}
+      {/* ── What We Do ───────────────────────────────────────────────────── */}
       <section id="about" className="px-6 md:px-12 py-20 md:py-28 relative overflow-hidden"
         style={{ background: 'linear-gradient(160deg, rgba(21,131,241,0.04) 0%, rgba(129,232,196,0.07) 100%)' }}>
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <FadeIn direction="left">
-            <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">Our Story</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Built for Operators Who Mean Business
-            </h2>
-            <p className="text-foreground/65 mb-4 leading-relaxed">
-              VendSavvy was created because managing multiple vending machines shouldn&apos;t require a spreadsheet,
-              a notebook, and three different apps. We built one platform that does it all.
+        <div className="absolute inset-0 pointer-events-none -z-10">
+          <div className="absolute -top-20 left-12 w-[320px] h-[320px] rounded-full bg-[#1583F1]/10 blur-[90px]" />
+          <div className="absolute bottom-8 right-12 w-[280px] h-[280px] rounded-full bg-[#81E8C4]/16 blur-[85px]" />
+        </div>
+
+        <div className="absolute pointer-events-none right-0 md:right-2 lg:-right-2 xl:-right-2 2xl:-right-8 -top-8 md:-top-4 lg:-top-8 xl:-top-10 2xl:-top-24 w-[150px] h-[150px] md:w-[220px] md:h-[220px] lg:w-[300px] lg:h-[300px] xl:w-[340px] xl:h-[340px] 2xl:w-[460px] 2xl:h-[460px] z-0 2xl:z-20 opacity-35 md:opacity-45 lg:opacity-55 xl:opacity-60 2xl:opacity-100">
+          <Image
+            src="/app%20icon.png"
+            alt=""
+            fill
+            sizes="(min-width: 1536px) 460px, (min-width: 1280px) 340px, (min-width: 1024px) 300px, (min-width: 768px) 220px, 150px"
+            className="object-contain drop-shadow-[0_18px_40px_rgba(21,131,241,0.28)]"
+          />
+        </div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
+          <FadeIn direction="up" className="text-center mb-12 md:mb-14">
+            <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">What We Do</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Built around the daily reality of vending operations</h2>
+            <p className="text-foreground/60 max-w-2xl mx-auto">
+              Vend Savvy helps operators manage machines, inventory, and financial performance in one connected workflow.
             </p>
-            <p className="text-foreground/65 mb-8 leading-relaxed">
-              Whether you&apos;re running 2 machines or 75, VendSavvy gives you the clarity and control to operate
-              like a pro and scale with confidence.
-            </p>
-            <Link href="/about">
-              <Button variant="outline">Learn Our Story</Button>
-            </Link>
           </FadeIn>
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {audienceCards.map((item) => (
-              <StaggerItem key={item.label}>
-                <m.div
-                  className="bg-white p-5 rounded-xl border border-border h-full"
-                  whileHover={{ scale: 1.03, borderColor: '#1583F1', boxShadow: '0 8px 24px rgba(21,131,241,0.10)' }}
-                  transition={{ duration: 0.18 }}
-                >
-                  <h4 className="font-semibold text-sm mb-1">{item.label}</h4>
-                  <p className="text-xs text-foreground/55">{item.desc}</p>
-                </m.div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+          <FadeIn direction="left" className="h-full">
+            <m.div
+              className="h-full bg-white/95 backdrop-blur-sm rounded-2xl border border-[#1583F1]/20 p-7 md:p-9 relative overflow-hidden"
+              whileHover={{ y: -4, boxShadow: '0 18px 40px rgba(21,131,241,0.10)' }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="absolute top-0 left-0 right-0 h-1 gradient-bg" />
+              <div className="absolute -right-14 -top-14 w-36 h-36 rounded-full bg-[#1583F1]/8 blur-2xl" />
+
+              <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">Vend Savvy helps vending operators</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-5">Vend Savvy helps vending operators</h2>
+              <p className="text-foreground/65 leading-relaxed mb-4">
+                Vend Savvy helps vending operators manage day-to-day operations with better visibility and stronger financial control.
+              </p>
+              <div className="rounded-xl border border-[#1583F1]/25 bg-gradient-to-r from-[#1583F1]/8 to-[#81E8C4]/10 px-4 py-3 inline-block">
+                <p className="text-sm font-semibold text-[#1270D0]">Whether you operate 5 machines or 500</p>
+              </div>
+              <p className="text-foreground/65 leading-relaxed mt-5">
+                Vend Savvy gives you a clear financial picture of your vending business.
+              </p>
+              <div className="mt-7">
+                <Link href="/about">
+                  <Button variant="outline" className="border-[#1583F1]/30 hover:border-[#1583F1]/60">
+                    Read More
+                  </Button>
+                </Link>
+              </div>
+            </m.div>
+          </FadeIn>
+
+          <FadeIn direction="right" delay={0.05} className="h-full">
+            <m.div
+              className="h-full bg-white/95 backdrop-blur-sm rounded-2xl border border-[#1583F1]/20 p-7 md:p-9 relative overflow-hidden"
+              whileHover={{ y: -4, boxShadow: '0 18px 40px rgba(21,131,241,0.10)' }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="absolute top-0 left-0 right-0 h-1 gradient-bg" />
+              <div className="absolute -left-14 -bottom-14 w-36 h-36 rounded-full bg-[#81E8C4]/12 blur-2xl" />
+
+              <div className="mb-6">
+                <h3 className="text-2xl md:text-3xl font-bold mb-3">Built for Vending Operators</h3>
+                <p className="text-foreground/70 font-semibold mb-2">We focus exclusively on the vending industry.</p>
+                <p className="text-sm text-foreground/60 leading-relaxed">
+                  That means every feature is designed around how vending businesses actually work:
+                </p>
+              </div>
+
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start gap-3 text-sm md:text-[15px] text-foreground/75 leading-relaxed">
+                  <span className="w-2 h-2 rounded-full gradient-bg mt-2.5 flex-shrink-0" />
+                  <span>Route-based operations</span>
+                </li>
+                <li className="flex items-start gap-3 text-sm md:text-[15px] text-foreground/75 leading-relaxed">
+                  <span className="w-2 h-2 rounded-full gradient-bg mt-2.5 flex-shrink-0" />
+                  <span>Location profitability tracking</span>
+                </li>
+                <li className="flex items-start gap-3 text-sm md:text-[15px] text-foreground/75 leading-relaxed">
+                  <span className="w-2 h-2 rounded-full gradient-bg mt-2.5 flex-shrink-0" />
+                  <span>Stock and inventory movement per machine</span>
+                </li>
+                <li className="flex items-start gap-3 text-sm md:text-[15px] text-foreground/75 leading-relaxed">
+                  <span className="w-2 h-2 rounded-full gradient-bg mt-2.5 flex-shrink-0" />
+                  <span>Cash and digital sales tracking</span>
+                </li>
+                <li className="flex items-start gap-3 text-sm md:text-[15px] text-foreground/75 leading-relaxed">
+                  <span className="w-2 h-2 rounded-full gradient-bg mt-2.5 flex-shrink-0" />
+                  <span>Simple onboarding for new machines and locations</span>
+                </li>
+              </ul>
+
+              <p className="text-sm text-foreground/65 leading-relaxed italic">
+                No bloated accounting tools. No unnecessary complexity. Just vending intelligence.
+              </p>
+            </m.div>
+          </FadeIn>
+          </div>
         </div>
       </section>
 
@@ -376,8 +460,9 @@ export default function LandingPage() {
           </StaggerContainer>
           <FadeIn direction="up" delay={0.1} className="text-center mt-10">
             <Link href="/pricing">
-              <Button variant="ghost" className="gradient-text">
-                Compare all plan features →
+              <Button variant="outline" className="group border-[#1583F1]/30 hover:border-[#1583F1]/60">
+                Compare all plan features
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
               </Button>
             </Link>
           </FadeIn>
@@ -404,16 +489,14 @@ export default function LandingPage() {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <m.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
                 <Link href="/signup">
-                  <Button size="lg"
-                    className="bg-white text-white hover:bg-white/90 shadow-[0_4px_20px_rgba(0,0,0,0.20)] hover:shadow-[0_6px_28px_rgba(0,0,0,0.25)] border-0">
+                  <Button size="lg" variant="cta">
                     Start Your Free Trial
                   </Button>
                 </Link>
               </m.div>
               <Link href="/pricing">
-                <Button size="lg" variant="outline"
-                  className="bg-white text-[#1583F1] border border-white/40 hover:bg-white hover:text-[#1583F1] shadow-none">
-                  <span className="gradient-text">View Pricing</span>
+                <Button size="lg" variant="cta-outline">
+                  View Pricing
                 </Button>
               </Link>
             </div>

@@ -32,24 +32,68 @@ const contactInfo = [
 
 const faqs = [
   {
-    q: 'How do I get started with VendSavvy?',
-    a: "Sign up for a free 28-day trial — no credit card required. You'll get full access to every feature from day one.",
+    q: 'What is VendSavvy?',
+    a: 'VendSavvy is an all-in-one platform designed for vending machine operators to track sales, manage inventory, monitor expenses, and calculate profits across all machines and locations.',
   },
   {
-    q: 'Can I import my existing data?',
-    a: 'Yes. VendSavvy supports CSV imports for machines, products, and sales history. Our support team can help you migrate.',
+    q: 'Who is VendSavvy for?',
+    a: 'VendSavvy is built for new vending machine owners, growing vending businesses, and operators managing multiple machines and locations.',
   },
   {
-    q: 'What happens if I need help setting up?',
-    a: "All paid plans include priority support. We're also building an onboarding flow to get you up and running in under 10 minutes.",
+    q: 'How does VendSavvy help me make more money?',
+    a: 'VendSavvy shows exactly how each machine and location is performing, helping you restock smarter, reduce waste, and focus on the most profitable machines.',
+  },
+  {
+    q: 'Can I track multiple machines and locations?',
+    a: 'Yes. You can manage all your machines, assign them to locations, and track performance individually or across your entire business.',
+  },
+  {
+    q: 'Does VendSavvy calculate commissions or rent for locations?',
+    a: 'Yes. VendSavvy automatically calculates what you owe each location based on commission percentages, flat rent, or hybrid agreements.',
+  },
+  {
+    q: 'Do I need special vending machines to use VendSavvy?',
+    a: 'No. VendSavvy works with any vending machine. You can enter data manually or connect supported devices for automatic tracking (coming soon).',
+  },
+  {
+    q: 'Can I track inventory?',
+    a: 'Yes. VendSavvy helps you monitor product levels, track restocks, and avoid running out of high-selling items.',
+  },
+  {
+    q: 'Does VendSavvy track expenses?',
+    a: 'Yes. You can log expenses like gas, repairs, commissions, and other costs to get a full view of your profits.',
+  },
+  {
+    q: 'What reports are included?',
+    a: 'VendSavvy includes profit and loss reports, sales by machine, location performance, and rental/commission settlement reports.',
+  },
+  {
+    q: 'Is there a free trial?',
+    a: 'Yes. All plans include a 28-day free trial so you can explore the platform risk-free.',
+  },
+  {
+    q: 'How does pricing work?',
+    a: 'Pricing is based on the number of machines you manage: Starter (up to 5 machines), Growth (6–20 machines), and Pro (21–75 machines).',
+  },
+  {
+    q: 'Can I upgrade my plan later?',
+    a: 'Yes. You can upgrade your plan at any time as your business grows.',
   },
   {
     q: 'Is my data secure?',
-    a: 'Absolutely. All data is encrypted in transit and at rest. We perform daily backups and maintain 99.9% uptime.',
+    a: 'Yes. VendSavvy uses secure systems to protect your data and keep your business information private.',
   },
   {
-    q: 'Can I cancel anytime?',
-    a: 'Yes. There are no long-term contracts. You can cancel at any time and your data will be retained for 30 days.',
+    q: 'Do I need accounting experience to use VendSavvy?',
+    a: 'No. VendSavvy is designed to be simple and easy to use, even if you have no accounting background.',
+  },
+  {
+    q: 'Can I access VendSavvy on my phone?',
+    a: 'Yes. VendSavvy is mobile-friendly, so you can manage your business on the go.',
+  },
+  {
+    q: 'Why not just use spreadsheets?',
+    a: 'Spreadsheets are manual, time-consuming, and prone to errors. VendSavvy automates your tracking, calculations, and reporting to save time and help you make better decisions faster.',
   },
 ];
 

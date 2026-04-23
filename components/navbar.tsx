@@ -70,7 +70,7 @@ export function Navbar() {
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-          <Image src="/logo.png" alt="VendSavvy" width={32} height={32} className="rounded-full" />
+          <Image src="/logo.png" alt="VendSavvy" width={40} height={40} className="rounded-full" />
           <span className="font-bold text-lg gradient-text">VendSavvy</span>
         </Link>
 
