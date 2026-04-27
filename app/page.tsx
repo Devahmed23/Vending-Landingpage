@@ -50,7 +50,7 @@ const pricingPlans = [
     price: '$0',
     period: '28 days',
     machines: 'Up to 5 Machines',
-    features: ['Full platform access', 'No credit card needed', 'Basic reports'],
+    features: ['Full platform access', 'Credit card details needed', 'Basic reports'],
     highlight: false,
     cta: 'Start Free',
   },
@@ -112,7 +112,7 @@ export default function LandingPage() {
             <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold mb-6 mx-auto md:mx-0"
               style={{ background: 'linear-gradient(135deg, rgba(21,131,241,0.12), rgba(129,232,196,0.15))', border: '1px solid rgba(21,131,241,0.25)' }}>
               <span className="w-1.5 h-1.5 rounded-full bg-[#1583F1] animate-pulse" />
-              <span className="gradient-text">28-Day Free Trial — No Credit Card Required</span>
+              <span className="gradient-text">28-Day Free Trial — Credit Card Required</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold leading-[1.1] mb-5 md:mb-6 text-foreground">
