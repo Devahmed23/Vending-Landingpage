@@ -328,7 +328,6 @@ export default function LandingPage() {
               <div className="absolute top-0 left-0 right-0 h-1 gradient-bg" />
               <div className="absolute -right-14 -top-14 w-36 h-36 rounded-full bg-[#1583F1]/8 blur-2xl" />
 
-              <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">Vend Savvy helps vending operators</p>
               <h2 className="text-3xl md:text-4xl font-bold mb-5">Vend Savvy helps vending operators</h2>
               <p className="text-foreground/65 leading-relaxed mb-4">
                 Vend Savvy helps vending operators manage day-to-day operations with better visibility and stronger financial control.
@@ -342,7 +341,7 @@ export default function LandingPage() {
               <div className="mt-7">
                 <Link href="/about">
                   <Button variant="outline" className="border-[#1583F1]/30 hover:border-[#1583F1]/60">
-                    Read More
+                    Learn More 
                   </Button>
                 </Link>
               </div>
