@@ -341,7 +341,7 @@ export default function LandingPage() {
               <div className="mt-7">
                 <Link href="/about">
                   <Button variant="outline" className="border-[#1583F1]/30 hover:border-[#1583F1]/60">
-                    Learn More 
+                    Learn More
                   </Button>
                 </Link>
               </div>
