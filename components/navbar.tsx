@@ -56,13 +56,13 @@ export function Navbar() {
   return (
     <>
       {/* Backdrop */}
-      {mobileOpen && (
-        <div
-          className="fixed inset-0 bg-black/40 z-[90] md:hidden"
-          aria-hidden="true"
-          onClick={() => setMobileOpen(false)}
-        />
-      )}
+      <div
+        className={`fixed inset-0 z-[90] bg-black/40 md:hidden transition-opacity duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+        aria-hidden="true"
+        onClick={() => setMobileOpen(false)}
+      />
 
       <nav
         ref={menuRef}
@@ -121,8 +121,9 @@ export function Navbar() {
         <div
           className={`
             absolute top-full left-0 right-0 bg-background border-b border-border shadow-xl
-            flex flex-col md:hidden overflow-hidden transition-all duration-200 ease-in-out
-            ${mobileOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'}
+            origin-top flex flex-col md:hidden overflow-hidden
+            transition-[max-height,opacity,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-[max-height,opacity,transform]
+            ${mobileOpen ? 'max-h-[560px] opacity-100 translate-y-0 scale-y-100' : 'max-h-0 opacity-0 -translate-y-2 scale-y-95 pointer-events-none'}
           `}
           aria-hidden={!mobileOpen}
         >
