@@ -261,7 +261,7 @@ export default function LandingPage() {
       </section>
 
       {/* ── Metrics — gradient band ───────────────────────────────────────── */}
-      <section className="gradient-bg relative z-10 -mt-8 md:-mt-12 px-6 md:px-12 py-14">
+      <section className="gradient-bg relative z-10 -mt-8 md:-mt-12 px-6 sm:px-8 md:px-12 py-14">
         <StaggerContainer className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {metrics.map((stat) => (
             <StaggerItem key={stat.label}>
@@ -321,28 +321,27 @@ export default function LandingPage() {
       </section>
 
       {/* ── What We Do ───────────────────────────────────────────────────── */}
-      <section id="about" className="px-6 md:px-12 py-20 md:py-28 relative overflow-hidden"
-        style={{ background: 'linear-gradient(160deg, rgba(21,131,241,0.04) 0%, rgba(129,232,196,0.07) 100%)' }}>
+      <section id="about" className="gradient-bg px-6 sm:px-8 md:px-12 py-20 md:py-28 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none -z-10">
           <div className="absolute -top-20 left-12 w-[320px] h-[320px] rounded-full bg-[#1583F1]/10 blur-[90px]" />
           <div className="absolute bottom-8 right-12 w-[280px] h-[280px] rounded-full bg-[#81E8C4]/16 blur-[85px]" />
         </div>
 
-        <div className="absolute pointer-events-none right-0 md:right-2 lg:-right-2 xl:-right-2 2xl:-right-8 -top-8 md:-top-4 lg:-top-8 xl:-top-10 2xl:-top-24 w-[150px] h-[150px] md:w-[220px] md:h-[220px] lg:w-[300px] lg:h-[300px] xl:w-[340px] xl:h-[340px] 2xl:w-[460px] 2xl:h-[460px] z-0 2xl:z-20 opacity-35 md:opacity-45 lg:opacity-55 xl:opacity-60 2xl:opacity-100">
+        <div className="absolute pointer-events-none right-0 sm:right-1 md:right-2 lg:-right-2 xl:-right-2 2xl:-right-8 -top-8 sm:-top-6 md:-top-4 lg:-top-8 xl:-top-10 2xl:-top-24 w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[300px] lg:h-[300px] xl:w-[340px] xl:h-[340px] 2xl:w-[460px] 2xl:h-[460px] z-10 opacity-35 sm:opacity-40 md:opacity-45 lg:opacity-55 xl:opacity-60 2xl:opacity-100">
           <Image
             src="/app%20icon.png"
             alt=""
             fill
-            sizes="(min-width: 1536px) 460px, (min-width: 1280px) 340px, (min-width: 1024px) 300px, (min-width: 768px) 220px, 150px"
+            sizes="(min-width: 1536px) 460px, (min-width: 1280px) 340px, (min-width: 1024px) 300px, (min-width: 768px) 220px, (min-width: 640px) 180px, 150px"
             className="object-contain drop-shadow-[0_18px_40px_rgba(21,131,241,0.28)]"
           />
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10">
           <FadeIn direction="up" className="text-center mb-12 md:mb-14">
-            <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">What We Do</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Built around the daily reality of vending operations</h2>
-            <p className="text-foreground/60 max-w-2xl mx-auto">
+            <p className="text-white text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3">What We Do</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-white">Built around the daily reality of vending operations</h2>
+            <p className="text-sm sm:text-base text-white/85 max-w-2xl mx-auto">
               Vend Savvy helps operators manage machines, inventory, and financial performance in one connected workflow.
             </p>
           </FadeIn>
@@ -350,19 +349,19 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
           <FadeIn direction="left" className="h-full">
             <m.div
-              className="h-full bg-white/95 backdrop-blur-sm rounded-2xl border border-[#1583F1]/20 p-7 md:p-9 relative overflow-hidden"
+              className="h-full bg-white/95 backdrop-blur-sm rounded-2xl border border-[#1583F1]/20 p-7 md:p-9 relative overflow-hidden shadow-lg"
               whileHover={{ y: -4, boxShadow: '0 18px 40px rgba(21,131,241,0.10)' }}
               transition={{ duration: 0.2 }}
             >
               <div className="absolute top-0 left-0 right-0 h-1 gradient-bg" />
               <div className="absolute -right-14 -top-14 w-36 h-36 rounded-full bg-[#1583F1]/8 blur-2xl" />
 
-              <h2 className="text-3xl md:text-4xl font-bold mb-5">Vend Savvy helps vending operators</h2>
-              <p className="text-foreground/65 leading-relaxed mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5">Vend Savvy helps vending operators</h2>
+              <p className="text-sm sm:text-base text-foreground/65 leading-relaxed mb-4">
                 Vend Savvy helps vending operators manage day-to-day operations with better visibility and stronger financial control.
               </p>
               <div className="rounded-xl border border-[#1583F1]/25 bg-gradient-to-r from-[#1583F1]/8 to-[#81E8C4]/10 px-4 py-3 inline-block">
-                <p className="text-sm font-semibold text-[#1270D0]">Whether you operate 5 machines or 500</p>
+                <p className="text-xs sm:text-sm font-semibold text-[#1270D0]">Whether you operate 5 machines or 500</p>
               </div>
               <p className="text-foreground/65 leading-relaxed mt-5">
                 Vend Savvy gives you a clear financial picture of your vending business.
@@ -379,7 +378,7 @@ export default function LandingPage() {
 
           <FadeIn direction="right" delay={0.05} className="h-full">
             <m.div
-              className="h-full bg-white/95 backdrop-blur-sm rounded-2xl border border-[#1583F1]/20 p-7 md:p-9 relative overflow-hidden"
+              className="h-full bg-white/95 backdrop-blur-sm rounded-2xl border border-[#1583F1]/20 p-7 md:p-9 relative overflow-hidden shadow-lg"
               whileHover={{ y: -4, boxShadow: '0 18px 40px rgba(21,131,241,0.10)' }}
               transition={{ duration: 0.2 }}
             >
@@ -387,37 +386,37 @@ export default function LandingPage() {
               <div className="absolute -left-14 -bottom-14 w-36 h-36 rounded-full bg-[#81E8C4]/12 blur-2xl" />
 
               <div className="mb-6">
-                <h3 className="text-2xl md:text-3xl font-bold mb-3">Built for Vending Operators</h3>
-                <p className="text-foreground/70 font-semibold mb-2">We focus exclusively on the vending industry.</p>
-                <p className="text-sm text-foreground/60 leading-relaxed">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3">Built for Vending Operators</h3>
+                <p className="text-sm sm:text-base text-foreground/70 font-semibold mb-2">We focus exclusively on the vending industry.</p>
+                <p className="text-xs sm:text-sm text-foreground/60 leading-relaxed">
                   That means every feature is designed around how vending businesses actually work:
                 </p>
               </div>
 
               <ul className="space-y-3 mb-6">
-                <li className="flex items-start gap-3 text-sm md:text-[15px] text-foreground/75 leading-relaxed">
+                <li className="flex items-start gap-3 text-xs sm:text-sm text-foreground/75 leading-relaxed">
                   <span className="w-2 h-2 rounded-full gradient-bg mt-2.5 flex-shrink-0" />
                   <span>Route-based operations</span>
                 </li>
-                <li className="flex items-start gap-3 text-sm md:text-[15px] text-foreground/75 leading-relaxed">
+                <li className="flex items-start gap-3 text-xs sm:text-sm text-foreground/75 leading-relaxed">
                   <span className="w-2 h-2 rounded-full gradient-bg mt-2.5 flex-shrink-0" />
                   <span>Location profitability tracking</span>
                 </li>
-                <li className="flex items-start gap-3 text-sm md:text-[15px] text-foreground/75 leading-relaxed">
+                <li className="flex items-start gap-3 text-xs sm:text-sm text-foreground/75 leading-relaxed">
                   <span className="w-2 h-2 rounded-full gradient-bg mt-2.5 flex-shrink-0" />
                   <span>Stock and inventory movement per machine</span>
                 </li>
-                <li className="flex items-start gap-3 text-sm md:text-[15px] text-foreground/75 leading-relaxed">
+                <li className="flex items-start gap-3 text-xs sm:text-sm text-foreground/75 leading-relaxed">
                   <span className="w-2 h-2 rounded-full gradient-bg mt-2.5 flex-shrink-0" />
                   <span>Cash and digital sales tracking</span>
                 </li>
-                <li className="flex items-start gap-3 text-sm md:text-[15px] text-foreground/75 leading-relaxed">
+                <li className="flex items-start gap-3 text-xs sm:text-sm text-foreground/75 leading-relaxed">
                   <span className="w-2 h-2 rounded-full gradient-bg mt-2.5 flex-shrink-0" />
                   <span>Simple onboarding for new machines and locations</span>
                 </li>
               </ul>
 
-              <p className="text-sm text-foreground/65 leading-relaxed italic">
+              <p className="text-xs sm:text-sm text-foreground/65 leading-relaxed italic">
                 No bloated accounting tools. No unnecessary complexity. Just vending intelligence.
               </p>
             </m.div>

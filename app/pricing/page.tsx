@@ -113,18 +113,34 @@ export default function PricingPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative px-6 md:px-12 py-16 md:py-24 overflow-hidden text-center"
-        style={{ background: 'linear-gradient(160deg, rgba(21,131,241,0.06) 0%, rgba(129,232,196,0.09) 100%)' }}>
-        <div className="absolute -top-32 -right-32 w-[400px] h-[400px] rounded-full bg-[#81E8C4]/12 blur-[100px] pointer-events-none" />
-        <div className="absolute -bottom-20 -left-20 w-[340px] h-[340px] rounded-full bg-[#1583F1]/8 blur-[90px] pointer-events-none" />
-        <FadeIn direction="up" className="relative">
-          <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-4">Pricing</p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Simple, <span className="gradient-text">Transparent Pricing</span></h1>
-          <p className="text-lg text-foreground/70 max-w-xl mx-auto">
-            No hidden fees. No long-term contracts. Start free, then scale as you grow.
-          </p>
-        </FadeIn>
+      {/* Hero - converted to About-style layout with home gradient backdrop */}
+      <section className="relative isolate overflow-hidden px-6 md:px-12 pt-6 pb-16 md:pt-16 md:pb-24">
+        <div className="absolute inset-0 -z-20 pointer-events-none bg-[linear-gradient(180deg,rgba(255,255,255,0.96)_0%,rgba(241,247,255,0.95)_18%,rgba(228,238,252,0.94)_42%,rgba(227,245,239,0.90)_72%,rgba(252,252,252,1)_100%)]" />
+        <div className="absolute left-0 top-0 h-full w-[52%] -z-10 pointer-events-none bg-[radial-gradient(ellipse_at_left_top,rgba(21,131,241,0.24)_0%,rgba(21,131,241,0.12)_24%,rgba(255,255,255,0)_68%)] animate-float will-change-transform" />
+        <div className="absolute right-0 top-0 h-full w-[52%] -z-10 pointer-events-none bg-[radial-gradient(ellipse_at_right_top,rgba(129,232,196,0.20)_0%,rgba(129,232,196,0.12)_24%,rgba(255,255,255,0)_68%)] animate-float-delayed will-change-transform" />
+        <div className="absolute left-[10%] top-[18%] -z-10 h-32 w-32 rounded-full bg-[#1583F1]/12 blur-3xl pointer-events-none animate-float-slow" />
+        <div className="absolute right-[12%] top-[24%] -z-10 h-40 w-40 rounded-full bg-[#81E8C4]/14 blur-3xl pointer-events-none animate-float" />
+
+        <div className="relative mx-auto grid max-w-7xl items-start gap-8 md:grid-cols-2 md:gap-12 lg:gap-16">
+          <FadeIn direction="left" className="text-center md:text-left relative z-10">
+            <p className="gradient-text mb-4 text-xs font-semibold uppercase tracking-[0.28em] sm:text-sm">Pricing</p>
+            <h1 className="text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl md:text-5xl lg:text-[56px] mb-4">
+              Simple,
+              <br className="hidden sm:block" />
+              <span className="gradient-text">Transparent Pricing</span>
+            </h1>
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg md:mx-0">
+              No hidden fees. No long-term contracts. Start free, then scale as you grow.
+            </p>
+          </FadeIn>
+
+          <FadeIn direction="right" delay={0.1} className="relative z-10 mx-auto w-full max-w-[700px]">
+            <div className="absolute -inset-6 rounded-full bg-gradient-to-br from-[#1583F1]/15 via-[#81E8C4]/10 to-transparent blur-3xl" />
+            <div className="relative overflow-hidden rounded-3xl border border-white/60 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.12)] h-56 md:h-[320px]">
+              {/* Kept existing decorative blur circles: left intentionally blank for pricing visual */}
+            </div>
+          </FadeIn>
+        </div>
       </section>
 
       {/* Pricing Cards */}

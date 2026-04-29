@@ -40,6 +40,14 @@ const posts = [
     date: 'Jan 15, 2025',
     image: '/blog3.jpeg',
   },
+  {
+    slug: 'why-customer-experience-is-key-in-vending',
+    title: 'Why Customer Experience is Key in Vending',
+    excerpt:
+      'How providing an exceptional customer experience can lead to increased loyalty and revenue.',
+    date: 'Dec 20, 2024',
+    image: '/blog4.jpeg',
+  }
 ];
 
 export default function BlogsPage() {
