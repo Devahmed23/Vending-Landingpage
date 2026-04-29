@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { m } from 'framer-motion';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
+import Reviews from '@/components/reviews';
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from '@/components/animations';
 
 const metrics = [
@@ -396,6 +397,8 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      <Reviews />
 
       {/* ── Pricing ──────────────────────────────────────────────────────── */}
       <section id="pricing" className="px-6 md:px-12 py-20 md:py-28 bg-white">
