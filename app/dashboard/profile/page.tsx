@@ -26,7 +26,8 @@ export default function ProfilePage() {
 
   const handleSave = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Profile updated:', formData);
+    // TODO: Implement actual profile update API call
+    // Never log sensitive user data
   };
 
   return (

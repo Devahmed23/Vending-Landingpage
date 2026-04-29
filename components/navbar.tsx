@@ -67,7 +67,7 @@ export function Navbar() {
 
       <nav
         ref={menuRef}
-        className="sticky top-0 flex items-center justify-between px-6 md:px-12 py-4 border-b border-border bg-background z-[100]"
+        className="sticky top-0 flex items-center justify-between px-6 md:px-12 py-4 border-b border-border/60 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/70 z-[100]"
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 flex-shrink-0">

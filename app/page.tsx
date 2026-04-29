@@ -92,23 +92,32 @@ const whatWeDoPoints = [
   'Automate reporting so decisions are data-driven, not guesswork',
 ];
 
+const socialProofAvatars = [
+  '/avatars/close-up-kid-expression-portrait_23-2150193262.avif',
+  '/avatars/handsome-sensitive-red-head-man-smiling_23-2149509820.avif',
+  '/avatars/photo-1438761681033-6461ffad8d80.avif',
+  '/avatars/6788bebd251ae.webp',
+];
+
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="relative px-6 md:px-12 pt-10 pb-0 md:pt-16 md:pb-0 overflow-x-clip overflow-y-visible">
-        {/* Ambient brand blobs */}
-        <div className="absolute inset-0 -z-10 pointer-events-none">
-          <div className="absolute -top-20 -left-20 w-[560px] h-[560px] rounded-full bg-[#1583F1]/10 blur-[110px]" />
-          <div className="absolute top-10 right-0 w-[420px] h-[420px] rounded-full bg-[#81E8C4]/18 blur-[90px]" />
-          <div className="absolute bottom-0 left-1/3 w-[300px] h-[300px] rounded-full bg-[#1583F1]/6 blur-[80px]" />
-        </div>
+      <section className="relative isolate px-6 md:px-12 pt-6 pb-0 md:pt-16 md:pb-0 overflow-x-clip overflow-y-visible">
+        {/* Hero gradient backdrop */}
+        <div className="absolute inset-x-0 top-0 h-[820px] -z-20 pointer-events-none bg-[linear-gradient(180deg,rgba(255,255,255,0.96)_0%,rgba(241,247,255,0.95)_18%,rgba(228,238,252,0.94)_42%,rgba(227,245,239,0.90)_72%,rgba(252,252,252,1)_100%)]" />
+        <div className="absolute left-0 top-0 h-full w-[52%] -z-10 pointer-events-none bg-[radial-gradient(ellipse_at_left_top,rgba(21,131,241,0.24)_0%,rgba(21,131,241,0.12)_24%,rgba(255,255,255,0)_68%)] animate-float will-change-transform" />
+        <div className="absolute right-0 top-0 h-full w-[52%] -z-10 pointer-events-none bg-[radial-gradient(ellipse_at_right_top,rgba(129,232,196,0.20)_0%,rgba(129,232,196,0.12)_24%,rgba(255,255,255,0)_68%)] animate-float-delayed will-change-transform" />
+        <div className="absolute left-[10%] top-[18%] h-32 w-32 rounded-full bg-[#1583F1]/12 blur-3xl -z-10 pointer-events-none animate-float-slow" />
+        <div className="absolute right-[12%] top-[24%] h-40 w-40 rounded-full bg-[#81E8C4]/14 blur-3xl -z-10 pointer-events-none animate-float" />
+        <div className="absolute left-1/2 bottom-[16%] h-24 w-24 -translate-x-1/2 rounded-full bg-[#1583F1]/10 blur-2xl -z-10 pointer-events-none animate-float-delayed" />
+        <div className="absolute inset-x-0 bottom-0 h-[180px] -z-10 pointer-events-none bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.7)_100%)]" />
 
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Left */}
-          <div className="pt-6 md:pt-16 pb-10 md:pb-24 text-center md:text-left">
+          <div className="pt-4 md:pt-16 pb-4 md:pb-24 text-center md:text-left">
             {/* Gradient pill badge */}
             <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold mb-6 mx-auto md:mx-0"
               style={{ background: 'linear-gradient(135deg, rgba(21,131,241,0.12), rgba(129,232,196,0.15))', border: '1px solid rgba(21,131,241,0.25)' }}>
@@ -142,9 +151,16 @@ export default function LandingPage() {
             {/* Social proof */}
             <div className="flex items-center gap-4 mt-8 justify-center md:justify-start">
               <div className="flex -space-x-2">
-                {['#1583F1', '#4BA8D8', '#81E8C4', '#1270D0'].map((c, i) => (
-                  <div key={i} className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center text-white text-[10px] font-bold" style={{ backgroundColor: c }}>
-                    {['J', 'M', 'A', 'R'][i]}
+                {socialProofAvatars.map((avatarSrc, i) => (
+                  <div key={avatarSrc} className="relative w-8 h-8 rounded-full border-2 border-white overflow-hidden flex-shrink-0">
+                    <Image
+                      src={avatarSrc}
+                      alt={`VendSavvy operator ${i + 1}`}
+                      fill
+                      loading="eager"
+                      sizes="32px"
+                      className="object-cover"
+                    />
                   </div>
                 ))}
               </div>
@@ -155,36 +171,41 @@ export default function LandingPage() {
           </div>
 
           {/* Mobile mockup */}
-          <div className="flex md:hidden justify-center pb-10 overflow-visible px-2">
-            <div className="relative w-full max-w-[390px] h-[420px] sm:h-[450px] overflow-visible">
+          <div className="flex md:hidden justify-center pb-2 -mt-4 sm:-mt-6 overflow-visible px-2">
+            <div className="relative w-full max-w-[390px] h-[320px] sm:h-[360px] overflow-visible">
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="w-[320px] h-[320px] bg-gradient-to-br from-[#1583F1]/20 to-[#81E8C4]/20 blur-3xl rounded-full" />
+                <div className="w-[280px] h-[280px] bg-gradient-to-br from-[#1583F1]/20 to-[#81E8C4]/20 blur-3xl rounded-full" />
               </div>
-              <div className="absolute left-1 bottom-8 w-[118px] h-[236px] rotate-[-12deg]">
+              <div className="absolute left-1 bottom-4 w-[108px] h-[216px] rotate-[-12deg]">
                 <Image
                   src="/iPhone 18.png"
                   alt="Analytics Screen"
                   fill
-                  sizes="118px"
+                  priority
+                  quality={95}
+                  sizes="(max-width: 640px) 108px, 108px"
                   className="object-contain drop-shadow-xl opacity-90"
                 />
               </div>
-              <div className="absolute left-1/2 bottom-0 z-10 w-[212px] h-[342px] -translate-x-1/2">
+              <div className="absolute left-1/2 bottom-[-2px] z-10 w-[188px] h-[304px] -translate-x-1/2">
                 <Image
                   src="/mockup.png"
                   alt="VendSavvy App"
                   fill
                   priority
-                  sizes="212px"
+                  quality={95}
+                  sizes="(max-width: 640px) 188px, 188px"
                   className="object-contain drop-shadow-2xl"
                 />
               </div>
-              <div className="absolute right-1 bottom-8 w-[118px] h-[236px] rotate-[12deg]">
+              <div className="absolute right-1 bottom-4 w-[108px] h-[216px] rotate-[12deg]">
                 <Image
                   src="/iPhone 17.png"
                   alt="Inventory Screen"
                   fill
-                  sizes="118px"
+                  priority
+                  quality={95}
+                  sizes="(max-width: 640px) 108px, 108px"
                   className="object-contain drop-shadow-xl opacity-90"
                 />
               </div>
@@ -197,6 +218,8 @@ export default function LandingPage() {
               <div className="w-[480px] h-[480px] bg-gradient-to-br from-[#1583F1]/15 to-[#81E8C4]/15 blur-3xl rounded-full" />
             </div>
             <Image src="/vending machine.png" alt="Vending machine" width={900} height={720}
+              quality={90}
+              priority
               sizes="(min-width: 1280px) 720px, (min-width: 1024px) 640px, 560px"
               className="absolute top-0 left-1/2 -translate-x-1/2 z-0 scale-[1.25] opacity-55 select-none pointer-events-none" />
             <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-transparent to-background/30 z-[1] pointer-events-none" />
@@ -205,7 +228,9 @@ export default function LandingPage() {
                 src="/iPhone 18.png"
                 alt="Analytics Screen"
                 fill
-                sizes="187px"
+                priority
+                quality={95}
+                sizes="(min-width: 1024px) 187px, 150px"
                 className="object-contain drop-shadow-xl opacity-90"
               />
             </div>
@@ -214,7 +239,9 @@ export default function LandingPage() {
                 src="/iPhone 17.png"
                 alt="Inventory Screen"
                 fill
-                sizes="187px"
+                priority
+                quality={95}
+                sizes="(min-width: 1024px) 187px, 150px"
                 className="object-contain drop-shadow-xl opacity-90"
               />
             </div>
@@ -224,6 +251,7 @@ export default function LandingPage() {
                 alt="Main App"
                 fill
                 priority
+                quality={95}
                 sizes="(min-width: 1280px) 480px, (min-width: 1024px) 420px, 360px"
                 className="object-contain drop-shadow-2xl"
               />
@@ -233,7 +261,7 @@ export default function LandingPage() {
       </section>
 
       {/* ── Metrics — gradient band ───────────────────────────────────────── */}
-      <section className="gradient-bg px-6 md:px-12 py-14">
+      <section className="gradient-bg relative z-10 -mt-8 md:-mt-12 px-6 md:px-12 py-14">
         <StaggerContainer className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {metrics.map((stat) => (
             <StaggerItem key={stat.label}>

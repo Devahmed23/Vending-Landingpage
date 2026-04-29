@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
+import { ArrowRight } from 'lucide-react';
 import {
   Card,
   CardHeader,
@@ -21,7 +22,7 @@ const posts = [
     excerpt:
       'Actionable steps to expand routes, hire technicians, and keep inventory profitable as you grow.',
     date: 'Mar 10, 2025',
-    image: '/blog-1.jpg',
+    image: '/blog1.jpeg',
   },
   {
     slug: 'reduce-stockouts-and-boost-sales',
@@ -29,7 +30,7 @@ const posts = [
     excerpt:
       'Inventory strategies that lower downtime and increase per-machine revenue without extra complexity.',
     date: 'Feb 2, 2025',
-    image: '/blog-2.jpg',
+    image: '/blog2.jpeg',
   },
   {
     slug: 'pricing-strategies-for-vending-operators',
@@ -37,7 +38,7 @@ const posts = [
     excerpt:
       'Simple pricing experiments that help you find the sweet spot between volume and margin.',
     date: 'Jan 15, 2025',
-    image: '/blog-3.jpg',
+    image: '/blog3.jpeg',
   },
 ];
 
@@ -71,7 +72,10 @@ export default function BlogsPage() {
 
                 <CardFooter>
                   <Link href={`/blogs/${post.slug}`} className="ml-auto">
-                    <Button variant="ghost">Read article</Button>
+                    <Button variant="outline" className="group border-[#1583F1]/30 hover:border-[#1583F1]/60 hover:bg-[#1583F1]/5">
+                      Read article
+                      <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-0.5" />
+                    </Button>
                   </Link>
                 </CardFooter>
               </Card>

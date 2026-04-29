@@ -26,7 +26,8 @@ export default function SignupPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Signup:', formData);
+    // TODO: Implement actual registration API call
+    // Never log passwords or sensitive credentials
   };
 
   return (
