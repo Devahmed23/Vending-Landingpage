@@ -7,15 +7,9 @@ import Image from 'next/image';
 import { m } from 'framer-motion';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
+import { FeatureMarquee } from '../components/feature-marquee';
 import Reviews from '@/components/reviews';
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from '@/components/animations';
-
-const metrics = [
-  { value: '10K+',  label: 'Active Operators' },
-  { value: '$50M+', label: 'Revenue Tracked' },
-  { value: '99.9%', label: 'Platform Uptime' },
-  { value: '24/7',  label: 'Live Support' },
-];
 
 const featureCards = [
   {
@@ -105,7 +99,7 @@ export default function LandingPage() {
       <Navbar />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="relative isolate px-6 md:px-12 pt-6 pb-0 md:pt-16 md:pb-0 overflow-x-clip overflow-y-visible">
+      <section className="relative isolate z-0 px-6 md:px-12 pt-6 pb-0 md:pt-16 md:pb-0 overflow-x-clip overflow-y-visible">
         {/* Hero gradient backdrop */}
         <div className="absolute inset-x-0 top-0 h-[820px] -z-20 pointer-events-none bg-[linear-gradient(180deg,rgba(255,255,255,0.96)_0%,rgba(241,247,255,0.95)_18%,rgba(228,238,252,0.94)_42%,rgba(227,245,239,0.90)_72%,rgba(252,252,252,1)_100%)]" />
         <div className="absolute left-0 top-0 h-full w-[52%] -z-10 pointer-events-none bg-[radial-gradient(ellipse_at_left_top,rgba(21,131,241,0.24)_0%,rgba(21,131,241,0.12)_24%,rgba(255,255,255,0)_68%)] animate-float will-change-transform" />
@@ -113,7 +107,7 @@ export default function LandingPage() {
         <div className="absolute left-[10%] top-[18%] h-32 w-32 rounded-full bg-[#1583F1]/12 blur-3xl -z-10 pointer-events-none animate-float-slow" />
         <div className="absolute right-[12%] top-[24%] h-40 w-40 rounded-full bg-[#81E8C4]/14 blur-3xl -z-10 pointer-events-none animate-float" />
         <div className="absolute left-1/2 bottom-[16%] h-24 w-24 -translate-x-1/2 rounded-full bg-[#1583F1]/10 blur-2xl -z-10 pointer-events-none animate-float-delayed" />
-        <div className="absolute inset-x-0 bottom-0 h-[180px] -z-10 pointer-events-none bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.7)_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-[110px] -z-10 pointer-events-none bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.7)_100%)]" />
 
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Left */}
@@ -213,7 +207,7 @@ export default function LandingPage() {
           </div>
 
           {/* Desktop 3-phone + vending machine */}
-          <div className="hidden md:flex relative items-end justify-center h-[560px] lg:h-[640px] xl:h-[680px] w-full overflow-visible px-2 lg:px-0 translate-y-8 lg:translate-y-10">
+          <div className="hidden md:flex relative items-end justify-center h-[560px] lg:h-[640px] xl:h-[680px] w-full overflow-visible px-2 lg:px-0 translate-y-8 lg:translate-y-10 z-0">
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="w-[480px] h-[480px] bg-gradient-to-br from-[#1583F1]/15 to-[#81E8C4]/15 blur-3xl rounded-full" />
             </div>
@@ -259,21 +253,18 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-
-      {/* ── Metrics — gradient band ───────────────────────────────────────── */}
-      <section className="gradient-bg relative z-10 -mt-8 md:-mt-12 px-6 sm:px-8 md:px-12 py-14">
-        <StaggerContainer className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {metrics.map((stat) => (
-            <StaggerItem key={stat.label}>
-              <p className="text-3xl md:text-4xl font-bold text-white mb-1">{stat.value}</p>
-              <p className="text-white/75 text-sm">{stat.label}</p>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-      </section>
-
       {/* ── Features ─────────────────────────────────────────────────────── */}
-      <section id="features" className="px-6 md:px-12 py-20 md:py-28 bg-white">
+      <section
+        id="features"
+        className="relative overflow-hidden px-6 md:px-12 py-20 md:py-28"
+        style={{
+          background: 'linear-gradient(180deg, rgba(21,131,241,0.05) 0%, rgba(129,232,196,0.08) 100%)',
+        }}
+      >
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -left-20 top-0 h-56 w-56 rounded-full bg-[#1583F1]/10 blur-3xl" />
+          <div className="absolute right-0 bottom-0 h-64 w-64 rounded-full bg-[#81E8C4]/12 blur-3xl" />
+        </div>
         <div className="max-w-6xl mx-auto">
           <FadeIn direction="up" className="text-center mb-16">
             <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">Why Vend Savvy</p>
@@ -292,7 +283,7 @@ export default function LandingPage() {
                 className={isLastOddCard ? 'md:col-span-2 md:flex md:justify-center' : ''}
               >
                 <m.div
-                  className={`group p-8 border border-border rounded-2xl bg-white cursor-default h-full relative overflow-hidden ${
+                  className={`group p-8 rounded-2xl bg-white cursor-default h-full relative overflow-hidden border border-[#0F172A]/18 shadow-[0_14px_34px_rgba(15,23,42,0.08)] hover:border-[#1270D0]/35 ${
                     isLastOddCard ? 'md:w-[calc(50%-0.75rem)]' : ''
                   }`}
                   whileHover={{ y: -4, boxShadow: '0 20px 48px rgba(21,131,241,0.10)' }}
@@ -319,6 +310,8 @@ export default function LandingPage() {
           </FadeIn>
         </div>
       </section>
+
+      <FeatureMarquee />
 
       {/* ── What We Do ───────────────────────────────────────────────────── */}
       <section id="about" className="gradient-bg px-6 sm:px-8 md:px-12 py-20 md:py-28 relative overflow-hidden">

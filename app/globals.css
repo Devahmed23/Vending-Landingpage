@@ -175,6 +175,67 @@
   .animate-float-slow,
   .animate-float-delayed { animation: none; }
 }
+
+/* ── Feature marquee ── */
+.feature-marquee-shell {
+  overflow: hidden;
+}
+
+.feature-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  animation: feature-marquee-scroll 58s linear infinite;
+}
+
+.feature-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.feature-marquee-group {
+  display: flex;
+  gap: 1.1rem;
+  padding-inline: 0.85rem;
+}
+
+.feature-marquee-card {
+  width: clamp(15.75rem, 19vw, 18.5rem);
+  min-height: 14rem;
+}
+
+@media (max-width: 640px) {
+  .feature-marquee-track {
+    animation-duration: 66s;
+  }
+
+  .feature-marquee-group {
+    gap: 0.8rem;
+    padding-inline: 0.55rem;
+  }
+
+  .feature-marquee-card {
+    width: clamp(14rem, 78vw, 16.5rem);
+    min-height: 12.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feature-marquee-track {
+    animation: none;
+    transform: none;
+  }
+}
+
+@keyframes feature-marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-12px); }
