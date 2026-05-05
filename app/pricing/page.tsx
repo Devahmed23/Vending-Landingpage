@@ -7,13 +7,14 @@ import { m } from 'framer-motion';
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from '@/components/animations';
 import { Check, X } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const plans = [
   {
     name: 'Free Trial',
     price: '$0',
-    period: '28 days',
-    description: 'Test drive VendSavvy with full access — zero risk.',
+    period: '30 days',
+    description: 'Start your free 30-day trial — full access, no credit card required.',
     machines: 'Up to 5 machines',
     highlight: false,
     cta: 'Start Free Trial',
@@ -108,6 +109,79 @@ const featureKeys = [
   'Custom Integrations',
 ];
 
+const comparisonRows = [
+  {
+    feature: 'Sales Tracking',
+    trial: true,
+    starter: true,
+    growth: true,
+    pro: true,
+  },
+  {
+    feature: 'Inventory Management',
+    trial: true,
+    starter: true,
+    growth: true,
+    pro: true,
+  },
+  {
+    feature: 'Expense Tracking',
+    trial: true,
+    starter: true,
+    growth: true,
+    pro: true,
+  },
+  {
+    feature: 'Profit & Loss Reports',
+    trial: true,
+    starter: true,
+    growth: true,
+    pro: true,
+  },
+  {
+    feature: 'Smart Alerts',
+    trial: true,
+    starter: true,
+    growth: true,
+    pro: true,
+  },
+  {
+    feature: 'Mobile App Access',
+    trial: true,
+    starter: true,
+    growth: true,
+    pro: true,
+  },
+  {
+    feature: 'Priority Support',
+    trial: '—',
+    starter: 'Basic',
+    growth: 'Priority',
+    pro: 'Premium',
+  },
+  {
+    feature: 'Advanced Analytics',
+    trial: true,
+    starter: true,
+    growth: true,
+    pro: true,
+  },
+  {
+    feature: 'API / Integrations',
+    trial: true,
+    starter: true,
+    growth: true,
+    pro: true,
+  },
+  {
+    feature: 'Machine Capacity',
+    trial: 'Up to 5',
+    starter: 'Up to 5',
+    growth: '6 to 20',
+    pro: '21-75+',
+  },
+];
+
 export default function PricingPage() {
   return (
     <div className="min-h-screen bg-background">
@@ -130,7 +204,7 @@ export default function PricingPage() {
               <span className="gradient-text">Transparent Pricing</span>
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg md:mx-0">
-              No hidden fees. No long-term contracts. Start free, then scale as you grow.
+              VendSavvy was designed to make professional vending management accessible for operators at every stage—whether you manage a few machines or a growing multi-location operation. 
             </p>
           </FadeIn>
 
@@ -143,54 +217,108 @@ export default function PricingPage() {
         </div>
       </section>
 
+      {/* Pricing overview & trial details */}
+      <section className="px-6 md:px-12 py-10 md:py-14">
+        <div className="max-w-6xl mx-auto">
+          <m.div className="rounded-2xl p-6 md:p-8 lg:p-10 bg-gradient-to-br from-[#F0FAFF] to-white border border-[#E6F3FF] shadow-lg flex flex-col md:flex-row items-start gap-6">
+            <div className="md:flex-1">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">Start Free. Grow on Your Terms.</h2>
+              <p className="text-foreground/75 leading-relaxed mb-3">
+                Every plan includes full access to the platform with no hidden fees or complicated contracts. Pricing scales based only on the number of machines you manage, so you can grow your business without paying for features you don’t use.
+              </p>
+              <p className="text-foreground/70 leading-relaxed mb-4">
+                Start with a free 30-day trial—no credit card required—and experience a simpler, more organized way to run your vending business. After your trial ends, your selected plan will continue automatically based on your chosen machine tier. You can upgrade, adjust, or cancel at any time.
+              </p>
+              <div className="flex items-center gap-3 mb-6">
+                <Link href="/signup">
+                  <Button size="lg">Start Free 30-Day Trial</Button>
+                </Link>
+                <Button asChild variant="link">
+                  <Link href="#compare">Compare Plans</Link>
+                </Button>
+              </div>
+
+              <div className="rounded-lg p-4 bg-white border border-[#EAF7FF] shadow-sm max-w-sm">
+                <p className="text-sm text-foreground/70 mb-3 font-semibold">Trial Details</p>
+                <ul className="space-y-2 text-sm text-foreground/80">
+                  <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#1583F1] mt-0.5" /> Full platform access for 30 days</li>
+                  <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#1583F1] mt-0.5" /> No credit card required</li>
+                  <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#1583F1] mt-0.5" /> Automatic continuation by machine tier</li>
+                  <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#1583F1] mt-0.5" /> Upgrade, adjust, or cancel anytime</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="md:w-80 lg:w-96 flex-shrink-0">
+              <div className="rounded-xl overflow-hidden shadow-xl">
+                <Image src="/mockup.png" alt="VendSavvy app mockup" width={420} height={300} className="object-cover" />
+              </div>
+            </div>
+          </m.div>
+
+        </div>
+      </section>
+
       {/* Pricing Cards */}
       <section className="px-6 md:px-12 py-16 md:py-24">
         <div className="max-w-6xl mx-auto">
           <StaggerContainer className="grid md:grid-cols-4 gap-6" staggerDelay={0.08}>
             {plans.map((plan) => (
               <StaggerItem key={plan.name}>
-                <m.div
-                  className={`relative p-6 rounded-xl border flex flex-col h-full ${
-                    plan.highlight
-                      ? 'text-white shadow-[0_8px_40px_rgba(21,131,241,0.30)]'
-                      : 'border-border bg-card'
-                  }`}
-                  style={plan.highlight ? { background: 'linear-gradient(135deg, #1270D0 0%, #1583F1 50%, #4BBFB0 100%)', borderColor: 'transparent' } : {}}
-                  whileHover={plan.highlight ? {} : { y: -8, boxShadow: '0 20px 48px rgba(21,131,241,0.12)' }}
-                  transition={{ duration: 0.22 }}
-                >
-                  {plan.highlight && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <span className="bg-white text-[#1583F1] text-xs font-bold px-4 py-1 rounded-full shadow-sm">
-                        Most Popular
-                      </span>
+                  <m.div
+                    className={`relative p-6 rounded-2xl flex flex-col h-full transition-shadow duration-200 shadow-sm hover:shadow-lg bg-white/70 backdrop-blur-sm border border-white/40`}
+                    style={
+                      plan.highlight
+                        ? { background: 'linear-gradient(135deg, #1270D0 0%, #1583F1 50%, #4BBFB0 100%)', color: '#fff', borderColor: 'transparent' }
+                        : undefined
+                    }
+                    whileHover={{ y: -6 }}
+                    transition={{ duration: 0.22 }}
+                  >
+                    {/* Free Trial badge */}
+                    {plan.name === 'Free Trial' && (
+                      <div className="absolute -top-3 left-4">
+                        <span className="bg-white text-[#1270D0] text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                          30-Day Free
+                        </span>
+                      </div>
+                    )}
+                    {plan.highlight && (
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                        <span className="bg-white text-[#1583F1] text-xs font-bold px-4 py-1 rounded-full shadow-sm">
+                          Most Popular
+                        </span>
+                      </div>
+                    )}
+                    <h3 className={`font-bold text-xl mb-1 ${plan.highlight ? 'text-white' : ''}`}>{plan.name}</h3>
+                    <p className={`text-xs mb-4 ${plan.highlight ? 'text-white/80' : 'text-foreground/60'}`}>{plan.description}</p>
+                    <div className="mb-2">
+                      <span className={`text-3xl font-bold ${plan.highlight ? 'text-white' : ''}`}>{plan.price}</span>
+                      <span className={`text-sm ml-1 ${plan.highlight ? 'text-white/70' : 'text-foreground/60'}`}>{plan.period}</span>
                     </div>
-                  )}
-                  <h3 className={`font-bold text-xl mb-1 ${plan.highlight ? 'text-white' : ''}`}>{plan.name}</h3>
-                  <p className={`text-xs mb-4 ${plan.highlight ? 'text-white/70' : 'text-foreground/60'}`}>{plan.description}</p>
-                  <div className="mb-2">
-                    <span className={`text-3xl font-bold ${plan.highlight ? 'text-white' : ''}`}>{plan.price}</span>
-                    <span className={`text-sm ml-1 ${plan.highlight ? 'text-white/70' : 'text-foreground/60'}`}>{plan.period}</span>
-                  </div>
-                  <p className={`text-xs mb-6 ${plan.highlight ? 'text-white/70' : 'text-foreground/60'}`}>{plan.machines}</p>
-                  <Link href="/signup" className="mt-auto">
-                    <Button
-                      className="w-full"
-                      variant={plan.highlight ? 'secondary' : 'outline'}
-                      style={plan.highlight ? { backgroundColor: 'rgba(255,255,255,0.18)', color: '#fff', borderColor: 'rgba(255,255,255,0.3)' } : {}}
-                    >
-                      {plan.cta}
-                    </Button>
-                  </Link>
-                </m.div>
-              </StaggerItem>
+                    <p className={`text-xs mb-6 ${plan.highlight ? 'text-white/70' : 'text-foreground/60'}`}>{plan.machines}</p>
+                    <Link href="/signup" className="mt-auto">
+                      <Button
+                        className="w-full"
+                        variant={plan.highlight ? 'secondary' : 'outline'}
+                        style={
+                          plan.highlight
+                            ? { backgroundColor: 'rgba(255,255,255,0.18)', color: '#fff', borderColor: 'rgba(255,255,255,0.3)' }
+                            : {}
+                        }
+                      >
+                        {plan.cta}
+                      </Button>
+                    </Link>
+                  </m.div>
+                </StaggerItem>
             ))}
           </StaggerContainer>
         </div>
       </section>
 
       {/* Feature Comparison Table */}
-      <section className="px-6 md:px-12 pb-16 md:pb-24">
+      <section id="compare" className="px-6 md:px-12 pb-16 md:pb-24">
         <div className="max-w-6xl mx-auto">
           <FadeIn direction="up" className="text-center mb-10">
             <h2 className="text-2xl font-bold">Compare All Plans</h2>
@@ -206,38 +334,47 @@ export default function PricingPage() {
                         key={plan.name}
                         className={`py-4 px-4 font-semibold text-center ${plan.highlight ? 'text-primary' : ''}`}
                       >
-                        {plan.name}
+                        {plan.name === 'Free Trial' ? 'Trial' : plan.name}
                       </th>
                     ))}
                   </tr>
                 </thead>
                 <tbody>
-                  {featureKeys.map((key, idx) => (
-                    <tr key={key} className={idx % 2 === 0 ? 'bg-background' : 'bg-foreground/[0.02]'}>
-                      <td className="py-3 px-6 text-foreground/80">{key}</td>
-                      {plans.map((plan) => (
-                        <td key={plan.name} className="py-3 px-4 text-center">
-                          {plan.features[key as keyof typeof plan.features] ? (
-                            <m.div
-                              initial={{ scale: 0 }}
-                              whileInView={{ scale: 1 }}
-                              viewport={{ once: true }}
-                              transition={{ duration: 0.3, delay: idx * 0.02 }}
-                            >
-                              <Check className="w-4 h-4 text-primary mx-auto" />
-                            </m.div>
-                          ) : (
-                            <X className="w-4 h-4 text-foreground/20 mx-auto" />
-                          )}
-                        </td>
-                      ))}
+                  {comparisonRows.map((row, idx) => (
+                    <tr key={row.feature} className={idx % 2 === 0 ? 'bg-background' : 'bg-foreground/[0.02]'}>
+                      <td className="py-3 px-6 text-foreground/80">{row.feature}</td>
+                      {['trial', 'starter', 'growth', 'pro'].map((planKey, planIndex) => {
+                        const value = row[planKey as keyof typeof row];
+                        const isBoolean = typeof value === 'boolean';
+
+                        return (
+                          <td key={planKey} className="py-3 px-4 text-center font-medium">
+                            {isBoolean ? (
+                              value ? (
+                                <m.div
+                                  initial={{ scale: 0 }}
+                                  whileInView={{ scale: 1 }}
+                                  viewport={{ once: true }}
+                                  transition={{ duration: 0.3, delay: (idx + planIndex) * 0.02 }}
+                                >
+                                  <Check className="w-4 h-4 text-primary mx-auto" />
+                                </m.div>
+                              ) : (
+                                <X className="w-4 h-4 text-foreground/20 mx-auto" />
+                              )
+                            ) : (
+                              <span className={planKey === 'trial' ? 'text-foreground/70' : 'text-foreground/80'}>{value}</span>
+                            )}
+                          </td>
+                        );
+                      })}
                     </tr>
                   ))}
                   <tr className="border-t border-border bg-foreground/5">
                     <td className="py-4 px-6 font-semibold">Machine Limit</td>
                     {plans.map((plan) => (
                       <td key={plan.name} className="py-4 px-4 text-center text-xs text-foreground/70">
-                        {plan.machines}
+                        {plan.name === 'Free Trial' ? 'Up to 5' : plan.machines}
                       </td>
                     ))}
                   </tr>

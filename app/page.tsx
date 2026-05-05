@@ -8,82 +8,39 @@ import { m } from 'framer-motion';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { FeatureMarquee } from '../components/feature-marquee';
-import Reviews from '@/components/reviews';
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from '@/components/animations';
 
 const featureCards = [
   {
     icon: Users,
-    title: 'Simple setup designed for non-technical users',
-    description: 'Get started fast with a setup that is easy to understand and simple to use from day one.',
+    title: 'Real-Time Business Visibility',
+    description: 'Know exactly how your vending business is performing at any moment. Track sales, top-performing machines, locations, inventory levels, and profitability from a single dashboard.',
   },
   {
     icon: Store,
-    title: 'Built specifically for vending, not generic retail',
-    description: 'Vend Savvy is shaped around vending workflows instead of broad retail assumptions.',
+    title: 'Simplified Inventory Management',
+    description: 'Avoid stockouts and overstocking. VendSavvy helps you monitor inventory levels, track restocks, and keep every machine properly stocked so your routes run more efficiently.',
   },
   {
     icon: TrendingUp,
-    title: 'Real-time visibility into performance',
-    description: 'See what is working right now so you can act before small issues become bigger problems.',
+    title: 'Expense Tracking & Profit Clarity',
+    description: 'Record product costs, repairs, fuel, commissions, and other expenses in one place. Understand your true profit margins and identify what’s actually driving revenue.',
   },
   {
     icon: BarChart3,
-    title: 'Scales with your business as you grow',
-    description: 'Whether you manage a few machines or a large route, the platform grows with your operation.',
+    title: 'Automated Commission & Settlement Tracking',
+    description: 'Stop manually calculating payouts. VendSavvy automates commission tracking and settlement reporting, making it easy to manage location partners and maintain professional relationships.',
   },
   {
     icon: RefreshCcw,
-    title: 'Replaces spreadsheets, guesswork, and disconnected systems',
-    description: 'Keep your sales, costs, inventory, and reporting in one place instead of scattered tools.',
-  },
-];
-
-const pricingPlans = [
-  {
-    name: 'Free Trial',
-    price: '$0',
-    period: '28 days',
-    machines: 'Up to 5 Machines',
-    features: ['Full platform access', 'Credit card details needed', 'Basic reports'],
-    highlight: false,
-    cta: 'Start Free',
+    title: 'Built for Scale',
+    description: 'VendSavvy is designed to support your business as it grows—from a few machines to a full multi-location operation—without adding complexity.',
   },
   {
-    name: 'Starter',
-    price: '$49.99',
-    period: '/month',
-    machines: 'Up to 5 Machines',
-    features: ['Everything in Free', 'Priority support', 'Sales tracking'],
-    highlight: false,
-    cta: 'Get Starter',
+    icon: RefreshCcw,
+    title: 'Mobile-Friendly & On-the-Go Access',
+    description: 'Run your vending business from anywhere. Update machines, review performance, and manage operations directly from your phone or tablet.',
   },
-  {
-    name: 'Growth',
-    price: '$89.99',
-    period: '/month',
-    machines: '6–20 Machines',
-    features: ['Everything in Starter', 'Proactive alerts', 'Advanced analytics'],
-    highlight: true,
-    cta: 'Get Growth',
-  },
-  {
-    name: 'Pro',
-    price: '$149.99',
-    period: '/month',
-    machines: '21–75 Machines',
-    features: ['Everything in Growth', 'API access', 'Custom integrations'],
-    highlight: false,
-    cta: 'Get Pro',
-  },
-];
-
-const whatWeDoPoints = [
-  'Track sales from every machine in real time',
-  'Manage inventory, restocking, and product performance',
-  'Log expenses, repairs, and operational costs',
-  'View profit & loss per machine, location, or route',
-  'Automate reporting so decisions are data-driven, not guesswork',
 ];
 
 const socialProofAvatars = [
@@ -116,27 +73,27 @@ export default function LandingPage() {
             <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold mb-6 mx-auto md:mx-0"
               style={{ background: 'linear-gradient(135deg, rgba(21,131,241,0.12), rgba(129,232,196,0.15))', border: '1px solid rgba(21,131,241,0.25)' }}>
               <span className="w-1.5 h-1.5 rounded-full bg-[#1583F1] animate-pulse" />
-              <span className="gradient-text">28-Day Free Trial — Credit Card Required</span>
+              <span className="gradient-text">30-Day Free Trial — Credit Card Required</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold leading-[1.1] mb-5 md:mb-6 text-foreground">
-              Manage, Track & Grow<br className="hidden sm:block" />
-              <span className="gradient-text"> Your Vending Business</span>
+              Manage, Track & Scale Your Vending <br className="hidden sm:block" />
+              <span className="gradient-text"> Business with Confidence</span>
             </h1>
 
             <p className="text-base md:text-lg text-foreground/65 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
-              Track sales, manage inventory, monitor profits, and grow your vending machine empire — all in one simple platform built for operators.
+              VendSavvy is an all-in-one vending management platform built for operators who are ready to move beyond spreadsheets, guesswork, and disconnected tools. 
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
               <Link href="/signup">
                 <Button size="lg" className="w-full sm:w-auto">
-                  Start Free 28-Day Trial
+                  Start Free Trial
                 </Button>
               </Link>
               <Link href="/features">
                 <Button size="lg" variant="outline" className="w-full sm:w-auto group">
-                  See All Features
+                  Learn More
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </Button>
               </Link>
@@ -265,49 +222,107 @@ export default function LandingPage() {
           <div className="absolute -left-20 top-0 h-56 w-56 rounded-full bg-[#1583F1]/10 blur-3xl" />
           <div className="absolute right-0 bottom-0 h-64 w-64 rounded-full bg-[#81E8C4]/12 blur-3xl" />
         </div>
-        <div className="max-w-6xl mx-auto">
-          <FadeIn direction="up" className="text-center mb-16">
-            <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">Why Vend Savvy</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Everything Your Vending Business Needs</h2>
-            <p className="text-foreground/60 max-w-xl mx-auto">
-              One platform for everything — so you can focus on growing, not managing chaos.
-            </p>
-          </FadeIn>
-          <StaggerContainer className="grid md:grid-cols-2 gap-6">
-            {featureCards.map((feature, idx) => {
-              const isLastOddCard = featureCards.length % 2 === 1 && idx === featureCards.length - 1;
-
-              return (
-              <StaggerItem
-                key={feature.title}
-                className={isLastOddCard ? 'md:col-span-2 md:flex md:justify-center' : ''}
-              >
-                <m.div
-                  className={`group p-8 rounded-2xl bg-white cursor-default h-full relative overflow-hidden border border-[#0F172A]/18 shadow-[0_14px_34px_rgba(15,23,42,0.08)] hover:border-[#1270D0]/35 ${
-                    isLastOddCard ? 'md:w-[calc(50%-0.75rem)]' : ''
-                  }`}
-                  whileHover={{ y: -4, boxShadow: '0 20px 48px rgba(21,131,241,0.10)' }}
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 xl:gap-16 items-start">
+            <FadeIn direction="left" className="lg:sticky lg:top-28">
+              <div className="max-w-xl">
+                <m.div 
+                  className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold mb-5"
+                  style={{ background: 'linear-gradient(135deg, rgba(21,131,241,0.12), rgba(129,232,196,0.15))', border: '1px solid rgba(21,131,241,0.25)' }}
+                  whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.2 }}
                 >
-                  {/* Gradient left accent bar */}
-                  <div className="absolute left-0 top-6 bottom-6 w-[3px] gradient-bg rounded-r-full opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                  {/* Gradient icon container */}
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
-                    style={{ background: 'linear-gradient(135deg, rgba(21,131,241,0.12), rgba(129,232,196,0.18))' }}>
-                    <feature.icon className="w-6 h-6 text-[#1583F1]" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-foreground/60 text-sm leading-relaxed">{feature.description}</p>
+                  <span className="w-2 h-2 rounded-full bg-[#1583F1] animate-pulse" />
+                  <span className="text-foreground/70">Built for operators who want clarity, not clutter</span>
                 </m.div>
-              </StaggerItem>
-              );
-            })}
-          </StaggerContainer>
-          <FadeIn direction="up" delay={0.1} className="text-center mt-10">
-            <Link href="/features">
-              <Button variant="outline">View All Features</Button>
-            </Link>
-          </FadeIn>
+                <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">Why Vend Savvy</p>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight">
+                  Everything Your Vending Business Needs
+                </h2>
+                <p className="text-foreground/60 text-base md:text-lg leading-relaxed max-w-lg mb-8">
+                  VendSavvy was built specifically for vending operators who need full control over their daily operations without relying on spreadsheets or disconnected tools. Most vending businesses don’t fail from lack of effort—they struggle because their systems aren’t built to show what’s actually happening in real time. VendSavvy solves this by connecting every part of your operation into one system so nothing is missed and every decision is based on accurate data. 
+                </p>
+                {/* The VendSavvy Advantage */}
+                <div className="mb-10">
+                  <h3 className="text-sm font-semibold uppercase tracking-widest text-foreground/70 mb-5">
+                    The VendSavvy Advantage
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {[
+                      'Reduce manual paperwork and spreadsheets',
+                      'Improve planning and efficiency',
+                      'Track machine performance in real time',
+                      'Prevent inventory shortages',
+                      'Gain clear profit visibility',
+                      'Simplify location and vendor management',
+                      'Make faster, data-driven decisions',
+                    ].map((advantage, idx) => (
+                      <m.div
+                        key={idx}
+                        className="flex items-start gap-3 group cursor-default"
+                        whileHover={{ x: 4 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <div className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5"
+                          style={{ background: 'linear-gradient(135deg, rgba(21,131,241,0.20), rgba(129,232,196,0.25))' }}>
+                          <Check className="w-3 h-3 text-[#1583F1]" strokeWidth={3} />
+                        </div>
+                        <span className="text-sm text-foreground/75 font-medium leading-snug group-hover:text-foreground transition-colors">
+                          {advantage}
+                        </span>
+                      </m.div>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex flex-wrap items-center gap-3">
+                  <Link href="/features">
+                    <Button variant="outline" className="border-[#1583F1]/30 hover:border-[#1583F1]/60">
+                      View All Features
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </FadeIn>
+
+            <StaggerContainer className="grid gap-4 sm:grid-cols-2">
+              {featureCards.map((feature, idx) => {
+                const isEven = idx % 2 === 0;
+                const bgGradient = isEven
+                  ? 'linear-gradient(135deg, rgba(21,131,241,0.08) 0%, rgba(255,255,255,0.5) 100%)'
+                  : 'linear-gradient(135deg, rgba(129,232,196,0.10) 0%, rgba(255,255,255,0.5) 100%)';
+                const borderColor = isEven ? 'rgba(21,131,241,0.30)' : 'rgba(129,232,196,0.30)';
+
+                return (
+                  <StaggerItem key={feature.title}>
+                    <m.div
+                      className="group p-6 rounded-2xl cursor-default h-full relative overflow-hidden border-2 border-l-4 shadow-[0_14px_34px_rgba(15,23,42,0.08)] hover:shadow-[0_20px_48px_rgba(21,131,241,0.10)]"
+                      style={{
+                        background: bgGradient,
+                        borderColor: borderColor,
+                        borderLeftColor: isEven ? '#1583F1' : '#81E8C4',
+                      }}
+                      whileHover={{ y: -4 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <div className="absolute top-0 left-0 right-0 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200" style={{
+                        background: isEven
+                          ? 'linear-gradient(90deg, #1583F1, rgba(21,131,241,0.3))'
+                          : 'linear-gradient(90deg, #81E8C4, rgba(129,232,196,0.3))'
+                      }} />
+                      <div
+                        className="w-10 h-10 rounded-xl flex items-center justify-center mb-3"
+                        style={{ background: 'linear-gradient(135deg, rgba(21,131,241,0.12), rgba(129,232,196,0.18))' }}
+                      >
+                        <feature.icon className="w-5 h-5 text-[#1583F1]" />
+                      </div>
+                      <h3 className="text-base font-semibold mb-1 text-foreground">{feature.title}</h3>
+                      <p className="text-foreground/60 text-sm leading-relaxed">{feature.description}</p>
+                    </m.div>
+                  </StaggerItem>
+                );
+              })}
+            </StaggerContainer>
+          </div>
         </div>
       </section>
 
@@ -418,78 +433,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <Reviews />
-
-      {/* ── Pricing ──────────────────────────────────────────────────────── */}
-      <section id="pricing" className="px-6 md:px-12 py-20 md:py-28 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <FadeIn direction="up" className="text-center mb-16">
-            <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">Pricing</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Simple Pricing That Scales</h2>
-            <p className="text-foreground/60">Start free. Upgrade when you&apos;re ready.</p>
-          </FadeIn>
-          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" staggerDelay={0.08}>
-            {pricingPlans.map((plan) => (
-              <StaggerItem key={plan.name}>
-                <m.div
-                  className={`relative p-6 rounded-2xl border h-full flex flex-col ${
-                    plan.highlight
-                      ? 'text-white shadow-[0_8px_40px_rgba(21,131,241,0.30)]'
-                      : 'border-border bg-white hover:border-[#1583F1]/40'
-                  }`}
-                  style={plan.highlight ? { background: 'linear-gradient(135deg, #1270D0 0%, #1583F1 50%, #4BBFB0 100%)', borderColor: 'transparent' } : {}}
-                  whileHover={plan.highlight ? {} : { y: -5, boxShadow: '0 16px 40px rgba(21,131,241,0.10)' }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {plan.highlight && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <span className="bg-white text-[#1583F1] text-xs font-bold px-4 py-1 rounded-full shadow-sm">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <h3 className={`font-bold text-base mb-3 ${plan.highlight ? 'text-white' : ''}`}>{plan.name}</h3>
-                  <div className="mb-1">
-                    <span className={`text-4xl font-bold ${plan.highlight ? 'text-white' : ''}`}>{plan.price}</span>
-                    <span className={`text-sm ml-1 ${plan.highlight ? 'text-white/70' : 'text-foreground/55'}`}>{plan.period}</span>
-                  </div>
-                  <p className={`text-xs mb-6 ${plan.highlight ? 'text-white/70' : 'text-foreground/50'}`}>{plan.machines}</p>
-                  <ul className="space-y-2.5 mb-7 flex-1">
-                    {plan.features.map((f) => (
-                      <li key={f} className="flex items-center gap-2.5 text-sm">
-                        <div className={`w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 ${
-                          plan.highlight ? 'bg-white/20' : ''
-                        }`}
-                          style={!plan.highlight ? { background: 'linear-gradient(135deg, rgba(21,131,241,0.15), rgba(129,232,196,0.20))' } : {}}>
-                          <Check className={`w-2.5 h-2.5 ${plan.highlight ? 'text-white' : 'text-[#1583F1]'}`} />
-                        </div>
-                        <span className={plan.highlight ? 'text-white/90' : 'text-foreground/70'}>{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link href="/signup">
-                    <Button
-                      className="w-full"
-                      variant={plan.highlight ? 'secondary' : 'outline'}
-                      style={plan.highlight ? { backgroundColor: 'rgba(255,255,255,0.18)', color: '#fff', borderColor: 'rgba(255,255,255,0.3)' } : {}}
-                    >
-                      {plan.cta}
-                    </Button>
-                  </Link>
-                </m.div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-          <FadeIn direction="up" delay={0.1} className="text-center mt-10">
-            <Link href="/pricing">
-              <Button variant="outline" className="group border-[#1583F1]/30 hover:border-[#1583F1]/60">
-                Compare all plan features
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
-              </Button>
-            </Link>
-          </FadeIn>
-        </div>
-      </section>
+      
+      
 
       {/* ── CTA ──────────────────────────────────────────────────────────── */}
       <section className="px-6 md:px-12 py-20 md:py-28"

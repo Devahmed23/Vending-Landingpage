@@ -38,21 +38,46 @@ const values = [
 
 const targetAudience = [
   {
-    title: 'Solo Operators',
-    description: "You're running 1–5 machines on the side or as your main gig. You need less chaos, more clarity.",
+    eyebrow: 'New Vendors',
+    title: 'New Vendors',
+    description:
+      'For individuals starting their vending business and trying to avoid early mistakes that cost time and profit.',
+    lead:
+      'Without the right system, it’s easy to lose track of inventory, underestimate costs, or not know which machines are actually profitable.',
+    points: [
+      'Track sales, inventory, and expenses from day one in one system',
+      'Understand true profit per machine without manual math or spreadsheets',
+      'Identify which products actually sell vs. sit idle',
+      'Avoid stockouts and over-ordering mistakes',
+      'Build consistent tracking habits that scale with your business',
+      'Make smarter location decisions early, before losses add up',
+    ],
   },
   {
-    title: 'Growing Fleets',
-    description: "You've scaled to 6–20 machines and spreadsheets aren't cutting it anymore. Time for a real system.",
+    eyebrow: 'Established Vendors',
+    title: 'Established Vendors',
+    description:
+      'For operators managing multiple machines, routes, or locations who are starting to lose visibility across their operation.',
+    lead:
+      'At scale, small inefficiencies become expensive - missed restocks, underperforming machines, and unclear profitability by location can quietly reduce margins.',
+    points: [
+      'See real-time performance across all machines and locations',
+      'Identify underperforming machines and routes immediately',
+      'Track inventory movement across every stop on your route',
+      'Monitor expenses, commissions, and profitability by location',
+      'Reduce stockouts and emergency restocking runs',
+      'Improve route efficiency and decision-making with clear data',
+      'Understand exactly where profit is being made or lost',
+    ],
   },
-  {
-    title: 'Full-Scale Operators',
-    description: 'You manage 20+ machines across multiple locations. You need reliable data, not guesswork.',
-  },
-  {
-    title: 'Multi-Industry Vendors',
-    description: 'Offices, schools, hospitals, gyms — wherever your machines are, VendSavvy has you covered.',
-  },
+  // {
+  //   title: 'Full-Scale Operators',
+  //   description: 'You manage 20+ machines across multiple locations. You need reliable data, not guesswork.',
+  // },
+  // {
+  //   title: 'Multi-Industry Vendors',
+  //   description: 'Offices, schools, hospitals, gyms — wherever your machines are, VendSavvy has you covered.',
+  // },
 ];
 
 export default function AboutPage() {
@@ -73,7 +98,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <FadeIn direction="left">
               <p className="text-lg font-semibold text-foreground/85 mb-6">
-                Vend Savvy is a modern SaaS platform built specifically for vending machine operators who want clarity, control, and profitability at scale.
+                VendSavvy was created to solve a problem many vending operators face every day—running an entire business through spreadsheets, handwritten notes, disconnected apps, and guesswork. 
               </p>
               <div className="space-y-5">
                 <div className="flex gap-4">
@@ -81,16 +106,16 @@ export default function AboutPage() {
                   <div>
                     <p className="font-semibold text-foreground/90 mb-1">The Problem We Solve</p>
                     <p className="text-foreground/70">
-                      Most vending businesses run on guesswork, spreadsheets, and disconnected tools. That makes it hard to know what's actually making money, what's underperforming, and where growth is coming from.
+                      Managing machines across multiple locations should not require hours of manual tracking just to understand sales, inventory, expenses, or profitability. Yet many operators still struggle to see what is actually making money, what needs attention, and where operational inefficiencies are costing them time and revenue. 
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="w-2 h-2 rounded-full gradient-bg mt-2.5 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-foreground/90 mb-1">Our Solution</p>
+                    <p className="font-semibold text-foreground/90 mb-1">We built VendSavvy to change that. </p>
                     <p className="text-foreground/70">
-                      Vend Savvy brings everything into one system—sales tracking, inventory management, expense logging, and profitability insights. All in one place, designed around how vending actually works.
+                      VendSavvy is a modern vending management platform designed specifically for vending operators who want more clarity, organization, and control over their business. Instead of piecing together multiple systems, operators can manage sales, inventory, expenses, machine performance, commissions, and reporting from one centralized platform. 
                     </p>
                   </div>
                 </div>
@@ -107,7 +132,7 @@ export default function AboutPage() {
                 <div className="absolute top-0 left-0 right-0 h-1 gradient-bg rounded-b-full" />
                 <div className="absolute -right-10 -top-10 w-32 h-32 rounded-full bg-[#1583F1]/10 blur-2xl" />
                 
-                <h3 className="text-xl font-bold mb-4 relative z-10">Built for Vending Operators</h3>
+                <h3 className="text-xl font-bold mb-4 relative z-10">Built for Modern Vending Operators</h3>
                 <ul className="space-y-3 relative z-10">
                   <li className="flex items-start gap-3">
                     <span className="w-1.5 h-1.5 rounded-full gradient-bg mt-2 flex-shrink-0" />
@@ -126,6 +151,9 @@ export default function AboutPage() {
                     <span className="text-sm text-foreground/75">Scales from 1 machine to 100+</span>
                   </li>
                 </ul>
+                <p className="text-sm text-foreground/60 mt-4">
+                  Whether you operate a few machines or manage a growing multi-location vending business, VendSavvy helps simplify operations so you can focus less on operational chaos and more on growing a profitable business. 
+                </p>
               </m.div>
             </FadeIn>
           </div>
@@ -135,39 +163,55 @@ export default function AboutPage() {
       {/* Mission */}
       <section className="px-6 md:px-12 py-16 md:py-24 bg-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          <FadeIn direction="left">
-            <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
-            <p className="text-lg font-semibold text-foreground/85 mb-4">
-              Our mission is to help vending operators scale smarter—not harder.
-            </p>
-            <p className="text-foreground/70 mb-4">
-              We believe small operators should have access to the same level of business intelligence as large enterprise vending companies. With the right data, any operator can optimize routes, reduce waste, and increase profit margins.
-            </p>
-            <p className="text-foreground/70">
-              VendSavvy is built on the belief that growth shouldn't require complexity. Whether you're managing your first machine or scaling to 100+, you deserve clarity, automation, and insights that help you make smarter decisions every single day.
-            </p>
+          <FadeIn direction="left" className="h-full flex items-center">
+            <div className="max-w-xl md:py-4">
+              <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
+              <p className="text-lg font-semibold text-foreground/85 mb-4">
+                Helping Vending Operators Scale Smarter
+              </p>
+              <p className="text-lg font-semibold text-foreground/85 mb-4">
+                Our mission is to make professional vending management accessible to operators at every stage of growth.
+              </p>
+              <p className="text-foreground/70 leading-relaxed">
+                We believe vending businesses should have access to the same level of operational visibility, organization, and business intelligence used by large enterprise operators, without the complexity or cost of enterprise software. Whether you manage your first vending machine or operate a large multi-location network, VendSavvy is designed to give you the tools, insights, and structure needed to run a smarter, more profitable business. 
+              </p>
+            </div>
           </FadeIn>
 
           <FadeIn direction="right" delay={0.1}>
-            <m.div
-              className="rounded-2xl p-10 relative overflow-hidden"
-              style={{ background: 'linear-gradient(135deg, rgba(21,131,241,0.06) 0%, rgba(129,232,196,0.10) 100%)', border: '1px solid rgba(21,131,241,0.15)' }}
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.25 }}
-            >
-              <blockquote className="text-xl font-medium text-foreground/80 italic leading-relaxed">
-                &ldquo;You shouldn&apos;t need a finance degree or a tech background to understand your vending
-                business. You just need VendSavvy.&rdquo;
-              </blockquote>
-              <p className="mt-6 text-sm font-semibold text-foreground/60">— The VendSavvy Team</p>
-            </m.div>
+            <div className="space-y-6">
+              <m.div
+                className="rounded-2xl p-10 relative overflow-hidden"
+                style={{ background: 'linear-gradient(135deg, rgba(21,131,241,0.06) 0%, rgba(129,232,196,0.10) 100%)', border: '1px solid rgba(21,131,241,0.15)' }}
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.25 }}
+              >
+                <blockquote className="text-xl font-medium text-foreground/80 italic leading-relaxed">
+                  &ldquo;You shouldn&apos;t need a finance degree or a tech background to understand your vending
+                  business. You just need VendSavvy.&rdquo;
+                </blockquote>
+                <p className="mt-6 text-sm font-semibold text-foreground/60">— The VendSavvy Team</p>
+              </m.div>
+
+              <div className="rounded-2xl border border-[#E6F3FF] bg-[linear-gradient(135deg,rgba(21,131,241,0.06),rgba(129,232,196,0.08))] p-6 md:p-8 shadow-[0_18px_50px_rgba(15,23,42,0.06)]">
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#1270D0] mb-3">VendSavvy was built to help operators take control of their business by making it easier to:</p>
+                <ul className="list-disc list-inside space-y-2 text-foreground/70 leading-relaxed">
+                  <li>Reduce manual tracking and paperwork</li>
+                  <li>Understand true machine profitability</li>
+                  <li>Improve inventory and route efficiency</li>
+                  <li>Simplify commission and location management</li>
+                  <li>Make faster, data-driven business decisions</li>
+                  <li>Scale operations with confidence and clarity</li>
+                </ul>
+              </div>
+            </div>
           </FadeIn>
         </div>
       </section>
 
       {/* Values */}
       <section className="px-6 md:px-12 py-16 md:py-24"
-        style={{ background: 'linear-gradient(160deg, rgba(21,131,241,0.04) 0%, rgba(129,232,196,0.07) 100%)' }}>
+        style={{ background: 'linear-gradient(135deg, rgba(18,112,208,0.10) 0%, rgba(21,131,241,0.08) 45%, rgba(75,191,176,0.12) 100%)' }}>
         <div className="max-w-6xl mx-auto">
           <FadeIn direction="up" className="text-center mb-12">
             <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">Our Values</p>
@@ -195,29 +239,69 @@ export default function AboutPage() {
       </section>
 
       {/* Who it's for */}
-      <section className="px-6 md:px-12 py-16 md:py-24 bg-white">
+      <section className="relative overflow-hidden px-6 md:px-12 py-16 md:py-24 bg-white">
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(241,247,255,0.88)_100%)]" />
+        <div className="absolute -left-20 top-0 -z-10 h-72 w-72 rounded-full bg-[#1583F1]/10 blur-3xl" />
+        <div className="absolute right-0 top-24 -z-10 h-80 w-80 rounded-full bg-[#81E8C4]/12 blur-3xl" />
+
         <div className="max-w-6xl mx-auto">
           <FadeIn direction="up" className="text-center mb-12">
             <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">Who It&apos;s For</p>
-            <h2 className="text-3xl font-bold mb-4">Who VendSavvy Is For</h2>
-            <p className="text-foreground/70 max-w-xl mx-auto">
-              Whether you&apos;re just starting out or running a full-scale operation, VendSavvy is built for you.
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Who VendSavvy Is For</h2>
+            <p className="text-foreground/70 max-w-3xl mx-auto leading-relaxed">
+              VendSavvy is built for vending operators who want clarity at every stage. Whether you&apos;re launching your first machine or managing a larger route network, the platform helps you understand what is working, what needs attention, and where your profit is going.
             </p>
           </FadeIn>
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <StaggerContainer className="grid gap-8 md:grid-cols-2">
             {targetAudience.map((item, idx) => (
               <StaggerItem key={item.title}>
                 <m.div
-                  className="p-6 border border-border rounded-xl h-full"
-                  whileHover={{ y: -5, borderColor: 'var(--primary)', boxShadow: '0 10px 28px rgba(0,0,0,0.08)' }}
+                  className="group relative h-full overflow-hidden rounded-[28px] border border-white/80 bg-white/92 p-8 md:p-9 shadow-[0_22px_64px_rgba(15,23,42,0.10)] backdrop-blur-sm transition-all"
+                  whileHover={{ y: -8, boxShadow: '0 34px 82px rgba(21,131,241,0.18)' }}
                   transition={{ duration: 0.22 }}
                 >
-                  <div className="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm mb-4 text-white"
-                    style={{ background: 'linear-gradient(135deg, #1583F1, #81E8C4)' }}>
-                    {idx + 1}
+                  <div className={`absolute inset-0 opacity-90 ${idx === 0 ? 'bg-[radial-gradient(circle_at_top_right,rgba(21,131,241,0.10),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.98),rgba(243,249,255,0.96))]' : 'bg-[radial-gradient(circle_at_top_right,rgba(75,191,176,0.10),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.98),rgba(240,250,247,0.96))]'}`} />
+                  <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#1583F1] via-[#1270D0] to-[#4BBFB0]" />
+                  <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-[#1583F1]/10 blur-3xl" />
+                  <div className="absolute -left-10 bottom-0 h-32 w-32 rounded-full bg-[#81E8C4]/10 blur-3xl" />
+                  <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white/40 to-transparent" />
+
+                  <div className="relative z-10 flex h-full flex-col">
+                    <div className="mb-6 flex items-center justify-between gap-4">
+                      <span className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] shadow-sm ${idx === 0 ? 'border border-[#1583F1]/15 bg-[#F3F9FF] text-[#1270D0]' : 'border border-[#4BBFB0]/15 bg-[#F3FCF9] text-[#0E7C6E]'}`}>
+                        {item.eyebrow}
+                      </span>
+                      <span className="text-sm font-semibold text-foreground/45">{item.points.length} benefits</span>
+                    </div>
+
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">{item.title}</h3>
+                    <p className="text-base md:text-[1.05rem] font-medium text-foreground/82 leading-relaxed mb-5 max-w-xl">
+                      {item.description}
+                    </p>
+                    <p className="text-sm md:text-base text-foreground/65 leading-relaxed mb-6 max-w-xl">
+                      {item.lead}
+                    </p>
+
+                    <div className={`rounded-3xl border p-5 md:p-6 shadow-[0_14px_36px_rgba(15,23,42,0.06)] ${idx === 0 ? 'border-[#DCEEFF] bg-[linear-gradient(135deg,rgba(21,131,241,0.06),rgba(255,255,255,0.92))]' : 'border-[#D9F5EE] bg-[linear-gradient(135deg,rgba(75,191,176,0.06),rgba(255,255,255,0.92))]'}`}>
+                      <div className="mb-4 flex items-center justify-between gap-3">
+                        <p className={`text-sm font-semibold uppercase tracking-[0.22em] ${idx === 0 ? 'text-[#1270D0]' : 'text-[#0E7C6E]'}`}>With VendSavvy, you can</p>
+                        <span className={`hidden sm:inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold ${idx === 0 ? 'bg-[#F3F9FF] text-[#1270D0]' : 'bg-[#F3FCF9] text-[#0E7C6E]'}`}>
+                          Smart, clear, scalable
+                        </span>
+                      </div>
+                      <ul className="space-y-3 text-sm md:text-[0.98rem] text-foreground/75 leading-relaxed">
+                        {item.points.map((point) => (
+                          <li key={point} className="flex items-start gap-3">
+                            <span className={`mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[11px] font-bold ${idx === 0 ? 'bg-[linear-gradient(135deg,rgba(21,131,241,0.15),rgba(129,232,196,0.22))] text-[#1583F1]' : 'bg-[linear-gradient(135deg,rgba(75,191,176,0.16),rgba(21,131,241,0.18))] text-[#0E7C6E]'}`}>
+                              ✓
+                            </span>
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <h3 className="font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sm text-foreground/70">{item.description}</p>
                 </m.div>
               </StaggerItem>
             ))}
@@ -225,9 +309,33 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Built to Grow With You */}
+      <section className="px-6 md:px-12 py-16 md:py-20 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <m.div
+            className="relative overflow-hidden rounded-[32px] border border-[#DCEEFF] bg-[linear-gradient(135deg,rgba(18,112,208,0.08),rgba(21,131,241,0.06),rgba(75,191,176,0.10))] p-8 md:p-10 shadow-[0_24px_70px_rgba(15,23,42,0.08)]"
+            whileHover={{ y: -4, boxShadow: '0 30px 84px rgba(21,131,241,0.14)' }}
+            transition={{ duration: 0.22 }}
+          >
+            <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-[#1583F1]/10 blur-3xl" />
+            <div className="absolute -left-10 bottom-0 h-36 w-36 rounded-full bg-[#81E8C4]/12 blur-3xl" />
+
+            <div className="relative z-10 text-center">
+              <p className="gradient-text text-sm font-semibold uppercase tracking-[0.28em] mb-4">Built to Grow With You</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">🚀 Built to Grow With You</h2>
+              <p className="max-w-3xl mx-auto text-base md:text-lg leading-relaxed text-foreground/75">
+                Whether you&apos;re operating a handful of machines or scaling into a full vending network, VendSavvy gives you the structure and visibility needed to run a more profitable, controlled, and scalable operation.
+              </p>
+              <div className="mt-6 inline-flex items-center rounded-full border border-[#1583F1]/15 bg-white/80 px-4 py-2 text-sm font-semibold text-[#1270D0] shadow-sm">
+                Track more. Know more. Earn more.
+              </div>
+            </div>
+          </m.div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="px-6 md:px-12 py-16 md:py-24"
-        style={{ background: 'linear-gradient(160deg, rgba(21,131,241,0.04) 0%, rgba(129,232,196,0.07) 100%)' }}>
+      <section className="px-6 md:px-12 py-16 md:py-24 bg-white">
         <ScaleIn>
           <div className="max-w-3xl mx-auto relative overflow-hidden rounded-3xl p-12 text-center"
             style={{ background: 'linear-gradient(135deg, #1270D0 0%, #1583F1 45%, #4BBFB0 100%)' }}>
