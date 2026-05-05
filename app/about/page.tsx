@@ -7,6 +7,7 @@ import { m } from 'framer-motion';
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from '@/components/animations';
 import { Target, Heart, Users, Zap } from 'lucide-react';
 import Link from 'next/link';
+import { AboutHero } from '@/components/about-hero';
 
 const values = [
   {
@@ -59,23 +60,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative px-6 md:px-12 py-16 md:py-24 overflow-hidden"
-        style={{ background: 'linear-gradient(160deg, rgba(21,131,241,0.06) 0%, rgba(129,232,196,0.09) 100%)' }}>
-        <div className="absolute -top-32 -right-32 w-[400px] h-[400px] rounded-full bg-[#81E8C4]/12 blur-[100px] pointer-events-none" />
-        <div className="absolute -bottom-20 -left-20 w-[340px] h-[340px] rounded-full bg-[#1583F1]/8 blur-[90px] pointer-events-none" />
-        <FadeIn direction="up" className="max-w-3xl mx-auto text-center relative">
-          <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-4">Our Story</p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            We Built VendSavvy Because<br />
-            <span className="gradient-text">Running Vending Machines Was Too Hard</span>
-          </h1>
-          <p className="text-lg text-foreground/70">
-            Tracking sales in a notebook. Managing inventory in a spreadsheet. Calculating profit in your head.
-            There had to be a better way — so we built one.
-          </p>
-        </FadeIn>
-      </section>
+      <AboutHero />
 
       {/* About Us */}
       <section className="px-6 md:px-12 py-16 md:py-24 bg-white">

@@ -22,7 +22,7 @@ export default function BlogPostPage({ params }: Props) {
           </header>
 
           <div className="w-full h-64 rounded-lg overflow-hidden mb-6 bg-muted">
-            <Image src="/blog-1.jpg" alt="" width={1200} height={600} className="w-full h-full object-cover" />
+            <Image src="/blog-1.jpg" alt={`Featured image for ${title}`} width={1200} height={600} quality={85} className="w-full h-full object-cover" />
           </div>
 
           <div className="prose prose-invert max-w-none text-foreground/80">

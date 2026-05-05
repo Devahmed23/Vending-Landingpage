@@ -67,7 +67,7 @@ export function Navbar() {
 
       <nav
         ref={menuRef}
-        className="sticky top-0 flex items-center justify-between px-6 md:px-12 py-4 border-b border-border bg-background z-[100]"
+        className="sticky top-0 flex items-center justify-between px-6 md:px-12 py-4 border-b border-border/60 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/70 z-[100]"
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 flex-shrink-0">
@@ -106,7 +106,7 @@ export function Navbar() {
 
         {/* Mobile Hamburger Button */}
         <button
-          className="md:hidden flex items-center justify-center w-10 h-10 rounded-md hover:bg-foreground/10 transition-colors"
+          className="lg:hidden flex items-center justify-center w-10 h-10 rounded-md hover:bg-foreground/10 transition-colors"
           onClick={() => setMobileOpen((prev) => !prev)}
           aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={mobileOpen}
@@ -122,7 +122,7 @@ export function Navbar() {
         <div
           className={`
             absolute top-full left-0 right-0 bg-background border-b border-border shadow-xl
-            origin-top flex flex-col md:hidden overflow-hidden
+            origin-top flex flex-col lg:hidden overflow-hidden
             transition-[max-height,opacity,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-[max-height,opacity,transform]
             ${mobileOpen ? 'max-h-[560px] opacity-100 translate-y-0 scale-y-100' : 'max-h-0 opacity-0 -translate-y-2 scale-y-95 pointer-events-none'}
           `}

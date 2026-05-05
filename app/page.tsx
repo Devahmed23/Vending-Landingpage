@@ -7,14 +7,9 @@ import Image from 'next/image';
 import { m } from 'framer-motion';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
+import { FeatureMarquee } from '../components/feature-marquee';
+import Reviews from '@/components/reviews';
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from '@/components/animations';
-
-const metrics = [
-  { value: '10K+',  label: 'Active Operators' },
-  { value: '$50M+', label: 'Revenue Tracked' },
-  { value: '99.9%', label: 'Platform Uptime' },
-  { value: '24/7',  label: 'Live Support' },
-];
 
 const featureCards = [
   {
@@ -91,23 +86,32 @@ const whatWeDoPoints = [
   'Automate reporting so decisions are data-driven, not guesswork',
 ];
 
+const socialProofAvatars = [
+  '/avatars/close-up-kid-expression-portrait_23-2150193262.avif',
+  '/avatars/handsome-sensitive-red-head-man-smiling_23-2149509820.avif',
+  '/avatars/photo-1438761681033-6461ffad8d80.avif',
+  '/avatars/6788bebd251ae.webp',
+];
+
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="relative px-6 md:px-12 pt-10 pb-0 md:pt-16 md:pb-0 overflow-x-clip overflow-y-visible">
-        {/* Ambient brand blobs */}
-        <div className="absolute inset-0 -z-10 pointer-events-none">
-          <div className="absolute -top-20 -left-20 w-[560px] h-[560px] rounded-full bg-[#1583F1]/10 blur-[110px]" />
-          <div className="absolute top-10 right-0 w-[420px] h-[420px] rounded-full bg-[#81E8C4]/18 blur-[90px]" />
-          <div className="absolute bottom-0 left-1/3 w-[300px] h-[300px] rounded-full bg-[#1583F1]/6 blur-[80px]" />
-        </div>
+      <section className="relative isolate z-0 px-6 md:px-12 pt-6 pb-0 md:pt-16 md:pb-0 overflow-x-clip overflow-y-visible">
+        {/* Hero gradient backdrop */}
+        <div className="absolute inset-x-0 top-0 h-[820px] -z-20 pointer-events-none bg-[linear-gradient(180deg,rgba(255,255,255,0.96)_0%,rgba(241,247,255,0.95)_18%,rgba(228,238,252,0.94)_42%,rgba(227,245,239,0.90)_72%,rgba(252,252,252,1)_100%)]" />
+        <div className="absolute left-0 top-0 h-full w-[52%] -z-10 pointer-events-none bg-[radial-gradient(ellipse_at_left_top,rgba(21,131,241,0.24)_0%,rgba(21,131,241,0.12)_24%,rgba(255,255,255,0)_68%)] animate-float will-change-transform" />
+        <div className="absolute right-0 top-0 h-full w-[52%] -z-10 pointer-events-none bg-[radial-gradient(ellipse_at_right_top,rgba(129,232,196,0.20)_0%,rgba(129,232,196,0.12)_24%,rgba(255,255,255,0)_68%)] animate-float-delayed will-change-transform" />
+        <div className="absolute left-[10%] top-[18%] h-32 w-32 rounded-full bg-[#1583F1]/12 blur-3xl -z-10 pointer-events-none animate-float-slow" />
+        <div className="absolute right-[12%] top-[24%] h-40 w-40 rounded-full bg-[#81E8C4]/14 blur-3xl -z-10 pointer-events-none animate-float" />
+        <div className="absolute left-1/2 bottom-[16%] h-24 w-24 -translate-x-1/2 rounded-full bg-[#1583F1]/10 blur-2xl -z-10 pointer-events-none animate-float-delayed" />
+        <div className="absolute inset-x-0 bottom-0 h-[110px] -z-10 pointer-events-none bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.7)_100%)]" />
 
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Left */}
-          <div className="pt-6 md:pt-16 pb-10 md:pb-24 text-center md:text-left">
+          <div className="pt-4 md:pt-16 pb-4 md:pb-24 text-center md:text-left">
             {/* Gradient pill badge */}
             <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold mb-6 mx-auto md:mx-0"
               style={{ background: 'linear-gradient(135deg, rgba(21,131,241,0.12), rgba(129,232,196,0.15))', border: '1px solid rgba(21,131,241,0.25)' }}>
@@ -141,9 +145,16 @@ export default function LandingPage() {
             {/* Social proof */}
             <div className="flex items-center gap-4 mt-8 justify-center md:justify-start">
               <div className="flex -space-x-2">
-                {['#1583F1', '#4BA8D8', '#81E8C4', '#1270D0'].map((c, i) => (
-                  <div key={i} className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center text-white text-[10px] font-bold" style={{ backgroundColor: c }}>
-                    {['J', 'M', 'A', 'R'][i]}
+                {socialProofAvatars.map((avatarSrc, i) => (
+                  <div key={avatarSrc} className="relative w-8 h-8 rounded-full border-2 border-white overflow-hidden flex-shrink-0">
+                    <Image
+                      src={avatarSrc}
+                      alt={`VendSavvy operator ${i + 1}`}
+                      fill
+                      loading="eager"
+                      sizes="32px"
+                      className="object-cover"
+                    />
                   </div>
                 ))}
               </div>
@@ -154,36 +165,41 @@ export default function LandingPage() {
           </div>
 
           {/* Mobile mockup */}
-          <div className="flex md:hidden justify-center pb-10 overflow-visible px-2">
-            <div className="relative w-full max-w-[390px] h-[420px] sm:h-[450px] overflow-visible">
+          <div className="flex md:hidden justify-center pb-2 -mt-4 sm:-mt-6 overflow-visible px-2">
+            <div className="relative w-full max-w-[390px] h-[320px] sm:h-[360px] overflow-visible">
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="w-[320px] h-[320px] bg-gradient-to-br from-[#1583F1]/20 to-[#81E8C4]/20 blur-3xl rounded-full" />
+                <div className="w-[280px] h-[280px] bg-gradient-to-br from-[#1583F1]/20 to-[#81E8C4]/20 blur-3xl rounded-full" />
               </div>
-              <div className="absolute left-1 bottom-8 w-[118px] h-[236px] rotate-[-12deg]">
+              <div className="absolute left-1 bottom-4 w-[108px] h-[216px] rotate-[-12deg]">
                 <Image
                   src="/iPhone 18.png"
                   alt="Analytics Screen"
                   fill
-                  sizes="118px"
+                  priority
+                  quality={95}
+                  sizes="(max-width: 640px) 108px, 108px"
                   className="object-contain drop-shadow-xl opacity-90"
                 />
               </div>
-              <div className="absolute left-1/2 bottom-0 z-10 w-[212px] h-[342px] -translate-x-1/2">
+              <div className="absolute left-1/2 bottom-[-2px] z-10 w-[188px] h-[304px] -translate-x-1/2">
                 <Image
                   src="/mockup.png"
                   alt="VendSavvy App"
                   fill
                   priority
-                  sizes="212px"
+                  quality={95}
+                  sizes="(max-width: 640px) 188px, 188px"
                   className="object-contain drop-shadow-2xl"
                 />
               </div>
-              <div className="absolute right-1 bottom-8 w-[118px] h-[236px] rotate-[12deg]">
+              <div className="absolute right-1 bottom-4 w-[108px] h-[216px] rotate-[12deg]">
                 <Image
                   src="/iPhone 17.png"
                   alt="Inventory Screen"
                   fill
-                  sizes="118px"
+                  priority
+                  quality={95}
+                  sizes="(max-width: 640px) 108px, 108px"
                   className="object-contain drop-shadow-xl opacity-90"
                 />
               </div>
@@ -191,11 +207,13 @@ export default function LandingPage() {
           </div>
 
           {/* Desktop 3-phone + vending machine */}
-          <div className="hidden md:flex relative items-end justify-center h-[560px] lg:h-[640px] xl:h-[680px] w-full overflow-visible px-2 lg:px-0 translate-y-8 lg:translate-y-10">
+          <div className="hidden md:flex relative items-end justify-center h-[560px] lg:h-[640px] xl:h-[680px] w-full overflow-visible px-2 lg:px-0 translate-y-8 lg:translate-y-10 z-0">
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="w-[480px] h-[480px] bg-gradient-to-br from-[#1583F1]/15 to-[#81E8C4]/15 blur-3xl rounded-full" />
             </div>
             <Image src="/vending machine.png" alt="Vending machine" width={900} height={720}
+              quality={90}
+              priority
               sizes="(min-width: 1280px) 720px, (min-width: 1024px) 640px, 560px"
               className="absolute top-0 left-1/2 -translate-x-1/2 z-0 scale-[1.25] opacity-55 select-none pointer-events-none" />
             <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-transparent to-background/30 z-[1] pointer-events-none" />
@@ -204,7 +222,9 @@ export default function LandingPage() {
                 src="/iPhone 18.png"
                 alt="Analytics Screen"
                 fill
-                sizes="187px"
+                priority
+                quality={95}
+                sizes="(min-width: 1024px) 187px, 150px"
                 className="object-contain drop-shadow-xl opacity-90"
               />
             </div>
@@ -213,7 +233,9 @@ export default function LandingPage() {
                 src="/iPhone 17.png"
                 alt="Inventory Screen"
                 fill
-                sizes="187px"
+                priority
+                quality={95}
+                sizes="(min-width: 1024px) 187px, 150px"
                 className="object-contain drop-shadow-xl opacity-90"
               />
             </div>
@@ -223,6 +245,7 @@ export default function LandingPage() {
                 alt="Main App"
                 fill
                 priority
+                quality={95}
                 sizes="(min-width: 1280px) 480px, (min-width: 1024px) 420px, 360px"
                 className="object-contain drop-shadow-2xl"
               />
@@ -230,21 +253,18 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-
-      {/* ── Metrics — gradient band ───────────────────────────────────────── */}
-      <section className="gradient-bg px-6 md:px-12 py-14">
-        <StaggerContainer className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {metrics.map((stat) => (
-            <StaggerItem key={stat.label}>
-              <p className="text-3xl md:text-4xl font-bold text-white mb-1">{stat.value}</p>
-              <p className="text-white/75 text-sm">{stat.label}</p>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-      </section>
-
       {/* ── Features ─────────────────────────────────────────────────────── */}
-      <section id="features" className="px-6 md:px-12 py-20 md:py-28 bg-white">
+      <section
+        id="features"
+        className="relative overflow-hidden px-6 md:px-12 py-20 md:py-28"
+        style={{
+          background: 'linear-gradient(180deg, rgba(21,131,241,0.05) 0%, rgba(129,232,196,0.08) 100%)',
+        }}
+      >
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -left-20 top-0 h-56 w-56 rounded-full bg-[#1583F1]/10 blur-3xl" />
+          <div className="absolute right-0 bottom-0 h-64 w-64 rounded-full bg-[#81E8C4]/12 blur-3xl" />
+        </div>
         <div className="max-w-6xl mx-auto">
           <FadeIn direction="up" className="text-center mb-16">
             <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">Why Vend Savvy</p>
@@ -263,7 +283,7 @@ export default function LandingPage() {
                 className={isLastOddCard ? 'md:col-span-2 md:flex md:justify-center' : ''}
               >
                 <m.div
-                  className={`group p-8 border border-border rounded-2xl bg-white cursor-default h-full relative overflow-hidden ${
+                  className={`group p-8 rounded-2xl bg-white cursor-default h-full relative overflow-hidden border border-[#0F172A]/18 shadow-[0_14px_34px_rgba(15,23,42,0.08)] hover:border-[#1270D0]/35 ${
                     isLastOddCard ? 'md:w-[calc(50%-0.75rem)]' : ''
                   }`}
                   whileHover={{ y: -4, boxShadow: '0 20px 48px rgba(21,131,241,0.10)' }}
@@ -291,29 +311,30 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <FeatureMarquee />
+
       {/* ── What We Do ───────────────────────────────────────────────────── */}
-      <section id="about" className="px-6 md:px-12 py-20 md:py-28 relative overflow-hidden"
-        style={{ background: 'linear-gradient(160deg, rgba(21,131,241,0.04) 0%, rgba(129,232,196,0.07) 100%)' }}>
+      <section id="about" className="gradient-bg px-6 sm:px-8 md:px-12 py-20 md:py-28 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none -z-10">
           <div className="absolute -top-20 left-12 w-[320px] h-[320px] rounded-full bg-[#1583F1]/10 blur-[90px]" />
           <div className="absolute bottom-8 right-12 w-[280px] h-[280px] rounded-full bg-[#81E8C4]/16 blur-[85px]" />
         </div>
 
-        <div className="absolute pointer-events-none right-0 md:right-2 lg:-right-2 xl:-right-2 2xl:-right-8 -top-8 md:-top-4 lg:-top-8 xl:-top-10 2xl:-top-24 w-[150px] h-[150px] md:w-[220px] md:h-[220px] lg:w-[300px] lg:h-[300px] xl:w-[340px] xl:h-[340px] 2xl:w-[460px] 2xl:h-[460px] z-0 2xl:z-20 opacity-35 md:opacity-45 lg:opacity-55 xl:opacity-60 2xl:opacity-100">
+        <div className="absolute pointer-events-none right-0 sm:right-1 md:right-2 lg:-right-2 xl:-right-2 2xl:-right-8 -top-8 sm:-top-6 md:-top-4 lg:-top-8 xl:-top-10 2xl:-top-24 w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[300px] lg:h-[300px] xl:w-[340px] xl:h-[340px] 2xl:w-[460px] 2xl:h-[460px] z-10 opacity-35 sm:opacity-40 md:opacity-45 lg:opacity-55 xl:opacity-60 2xl:opacity-100">
           <Image
             src="/app%20icon.png"
             alt=""
             fill
-            sizes="(min-width: 1536px) 460px, (min-width: 1280px) 340px, (min-width: 1024px) 300px, (min-width: 768px) 220px, 150px"
+            sizes="(min-width: 1536px) 460px, (min-width: 1280px) 340px, (min-width: 1024px) 300px, (min-width: 768px) 220px, (min-width: 640px) 180px, 150px"
             className="object-contain drop-shadow-[0_18px_40px_rgba(21,131,241,0.28)]"
           />
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10">
           <FadeIn direction="up" className="text-center mb-12 md:mb-14">
-            <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">What We Do</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Built around the daily reality of vending operations</h2>
-            <p className="text-foreground/60 max-w-2xl mx-auto">
+            <p className="text-white text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3">What We Do</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-white">Built around the daily reality of vending operations</h2>
+            <p className="text-sm sm:text-base text-white/85 max-w-2xl mx-auto">
               Vend Savvy helps operators manage machines, inventory, and financial performance in one connected workflow.
             </p>
           </FadeIn>
@@ -321,19 +342,19 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
           <FadeIn direction="left" className="h-full">
             <m.div
-              className="h-full bg-white/95 backdrop-blur-sm rounded-2xl border border-[#1583F1]/20 p-7 md:p-9 relative overflow-hidden"
+              className="h-full bg-white/95 backdrop-blur-sm rounded-2xl border border-[#1583F1]/20 p-7 md:p-9 relative overflow-hidden shadow-lg"
               whileHover={{ y: -4, boxShadow: '0 18px 40px rgba(21,131,241,0.10)' }}
               transition={{ duration: 0.2 }}
             >
               <div className="absolute top-0 left-0 right-0 h-1 gradient-bg" />
               <div className="absolute -right-14 -top-14 w-36 h-36 rounded-full bg-[#1583F1]/8 blur-2xl" />
 
-              <h2 className="text-3xl md:text-4xl font-bold mb-5">Vend Savvy helps vending operators</h2>
-              <p className="text-foreground/65 leading-relaxed mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5">Vend Savvy helps vending operators</h2>
+              <p className="text-sm sm:text-base text-foreground/65 leading-relaxed mb-4">
                 Vend Savvy helps vending operators manage day-to-day operations with better visibility and stronger financial control.
               </p>
               <div className="rounded-xl border border-[#1583F1]/25 bg-gradient-to-r from-[#1583F1]/8 to-[#81E8C4]/10 px-4 py-3 inline-block">
-                <p className="text-sm font-semibold text-[#1270D0]">Whether you operate 5 machines or 500</p>
+                <p className="text-xs sm:text-sm font-semibold text-[#1270D0]">Whether you operate 5 machines or 500</p>
               </div>
               <p className="text-foreground/65 leading-relaxed mt-5">
                 Vend Savvy gives you a clear financial picture of your vending business.
@@ -350,7 +371,7 @@ export default function LandingPage() {
 
           <FadeIn direction="right" delay={0.05} className="h-full">
             <m.div
-              className="h-full bg-white/95 backdrop-blur-sm rounded-2xl border border-[#1583F1]/20 p-7 md:p-9 relative overflow-hidden"
+              className="h-full bg-white/95 backdrop-blur-sm rounded-2xl border border-[#1583F1]/20 p-7 md:p-9 relative overflow-hidden shadow-lg"
               whileHover={{ y: -4, boxShadow: '0 18px 40px rgba(21,131,241,0.10)' }}
               transition={{ duration: 0.2 }}
             >
@@ -358,37 +379,37 @@ export default function LandingPage() {
               <div className="absolute -left-14 -bottom-14 w-36 h-36 rounded-full bg-[#81E8C4]/12 blur-2xl" />
 
               <div className="mb-6">
-                <h3 className="text-2xl md:text-3xl font-bold mb-3">Built for Vending Operators</h3>
-                <p className="text-foreground/70 font-semibold mb-2">We focus exclusively on the vending industry.</p>
-                <p className="text-sm text-foreground/60 leading-relaxed">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3">Built for Vending Operators</h3>
+                <p className="text-sm sm:text-base text-foreground/70 font-semibold mb-2">We focus exclusively on the vending industry.</p>
+                <p className="text-xs sm:text-sm text-foreground/60 leading-relaxed">
                   That means every feature is designed around how vending businesses actually work:
                 </p>
               </div>
 
               <ul className="space-y-3 mb-6">
-                <li className="flex items-start gap-3 text-sm md:text-[15px] text-foreground/75 leading-relaxed">
+                <li className="flex items-start gap-3 text-xs sm:text-sm text-foreground/75 leading-relaxed">
                   <span className="w-2 h-2 rounded-full gradient-bg mt-2.5 flex-shrink-0" />
                   <span>Route-based operations</span>
                 </li>
-                <li className="flex items-start gap-3 text-sm md:text-[15px] text-foreground/75 leading-relaxed">
+                <li className="flex items-start gap-3 text-xs sm:text-sm text-foreground/75 leading-relaxed">
                   <span className="w-2 h-2 rounded-full gradient-bg mt-2.5 flex-shrink-0" />
                   <span>Location profitability tracking</span>
                 </li>
-                <li className="flex items-start gap-3 text-sm md:text-[15px] text-foreground/75 leading-relaxed">
+                <li className="flex items-start gap-3 text-xs sm:text-sm text-foreground/75 leading-relaxed">
                   <span className="w-2 h-2 rounded-full gradient-bg mt-2.5 flex-shrink-0" />
                   <span>Stock and inventory movement per machine</span>
                 </li>
-                <li className="flex items-start gap-3 text-sm md:text-[15px] text-foreground/75 leading-relaxed">
+                <li className="flex items-start gap-3 text-xs sm:text-sm text-foreground/75 leading-relaxed">
                   <span className="w-2 h-2 rounded-full gradient-bg mt-2.5 flex-shrink-0" />
                   <span>Cash and digital sales tracking</span>
                 </li>
-                <li className="flex items-start gap-3 text-sm md:text-[15px] text-foreground/75 leading-relaxed">
+                <li className="flex items-start gap-3 text-xs sm:text-sm text-foreground/75 leading-relaxed">
                   <span className="w-2 h-2 rounded-full gradient-bg mt-2.5 flex-shrink-0" />
                   <span>Simple onboarding for new machines and locations</span>
                 </li>
               </ul>
 
-              <p className="text-sm text-foreground/65 leading-relaxed italic">
+              <p className="text-xs sm:text-sm text-foreground/65 leading-relaxed italic">
                 No bloated accounting tools. No unnecessary complexity. Just vending intelligence.
               </p>
             </m.div>
@@ -396,6 +417,8 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      <Reviews />
 
       {/* ── Pricing ──────────────────────────────────────────────────────── */}
       <section id="pricing" className="px-6 md:px-12 py-20 md:py-28 bg-white">

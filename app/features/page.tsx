@@ -120,7 +120,7 @@ const features = [
   {
     icon: Shield,
     title: 'Secure & Reliable',
-    mockup: '/security.png',
+    mockup: '/mockup3.png',
     description:
       'Your data is protected and always available.',
     bullets: [
@@ -137,30 +137,46 @@ export default function FeaturesPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative px-4 sm:px-6 md:px-12 py-14 md:py-24 overflow-hidden bg-gradient-to-br from-[#1583F1]/5 to-[#81E8C4]/10">
-        <FadeIn direction="up" className="max-w-4xl mx-auto text-center">
-          <p className="gradient-text text-xs sm:text-sm font-semibold uppercase tracking-widest mb-4">
-            Platform Features
-          </p>
+      {/* Hero - converted to About-style layout with home gradient backdrop */}
+      <section className="relative isolate overflow-hidden px-6 md:px-12 pt-6 pb-16 md:pt-16 md:pb-24">
+        <div className="absolute inset-0 -z-20 pointer-events-none bg-[linear-gradient(180deg,rgba(255,255,255,0.96)_0%,rgba(241,247,255,0.95)_18%,rgba(228,238,252,0.94)_42%,rgba(227,245,239,0.90)_72%,rgba(252,252,252,1)_100%)]" />
+        <div className="absolute left-0 top-0 h-full w-[52%] -z-10 pointer-events-none bg-[radial-gradient(ellipse_at_left_top,rgba(21,131,241,0.24)_0%,rgba(21,131,241,0.12)_24%,rgba(255,255,255,0)_68%)] animate-float will-change-transform" />
+        <div className="absolute right-0 top-0 h-full w-[52%] -z-10 pointer-events-none bg-[radial-gradient(ellipse_at_right_top,rgba(129,232,196,0.20)_0%,rgba(129,232,196,0.12)_24%,rgba(255,255,255,0)_68%)] animate-float-delayed will-change-transform" />
+        <div className="absolute left-[10%] top-[18%] -z-10 h-32 w-32 rounded-full bg-[#1583F1]/12 blur-3xl pointer-events-none animate-float-slow" />
+        <div className="absolute right-[12%] top-[24%] -z-10 h-40 w-40 rounded-full bg-[#81E8C4]/14 blur-3xl pointer-events-none animate-float" />
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            Everything You Need to Run a <br />
-            <span className="gradient-text">
-              Profitable Vending Business
-            </span>
-          </h1>
+        <div className="relative mx-auto grid max-w-7xl items-start gap-8 md:grid-cols-2 md:gap-12 lg:gap-16">
+          <FadeIn direction="left" className="text-center md:text-left relative z-10">
+            <p className="gradient-text mb-4 text-xs font-semibold uppercase tracking-[0.28em] sm:text-sm">
+              Platform Features
+            </p>
 
-          <p className="text-base sm:text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
-            VendSavvy brings sales tracking, inventory, expenses, and reporting into one powerful platform.
-          </p>
+            <h1 className="text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl md:text-5xl lg:text-[56px]">
+              Everything You Need to Run a
+              <br className="hidden sm:block" />
+              <span className="gradient-text">Profitable Vending Business</span>
+            </h1>
 
-          <m.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-            <Link href="/signup">
-              <Button size="lg">Start Free 28-Day Trial</Button>
-            </Link>
-          </m.div>
-        </FadeIn>
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg md:mx-0">
+              VendSavvy brings sales tracking, inventory, expenses, and reporting into one powerful platform.
+            </p>
+
+            <div className="mt-6">
+              <m.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
+                <Link href="/signup">
+                  <Button size="lg">Start Free 28-Day Trial</Button>
+                </Link>
+              </m.div>
+            </div>
+          </FadeIn>
+
+          <FadeIn direction="right" delay={0.1} className="relative z-10 mx-auto w-full max-w-[700px]">
+            <div className="absolute -inset-6 rounded-full bg-gradient-to-br from-[#1583F1]/15 via-[#81E8C4]/10 to-transparent blur-3xl" />
+            <div className="relative overflow-hidden rounded-3xl border border-white/60 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.12)] h-56 md:h-[320px]">
+              {/* Intentionally left as the existing picture space — placeholder box kept */}
+            </div>
+          </FadeIn>
+        </div>
       </section>
 
       {/* Features */}
@@ -237,6 +253,7 @@ export default function FeaturesPage() {
                           src={feature.mockup}
                           alt={feature.title}
                           fill
+                          sizes="(min-width: 768px) 50vw, 100vw"
                           className="object-contain drop-shadow-[0_40px_80px_rgba(0,0,0,0.25)]"
                         />
                       </div>
