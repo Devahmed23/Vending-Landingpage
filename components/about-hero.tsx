@@ -13,17 +13,19 @@ export function AboutHero() {
 
       <div className="relative mx-auto grid max-w-7xl items-start gap-8 md:grid-cols-2 md:gap-12 lg:gap-16">
         <div className="text-center md:text-left relative z-10">
-          <p className="gradient-text mb-4 text-xs font-semibold uppercase tracking-[0.28em] sm:text-sm">
-            Our Story
-          </p>
+         
           <h1 className="text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl md:text-5xl lg:text-[56px]">
-            We Built VendSavvy Because
-            <br className="hidden sm:block" />
-            <span className="gradient-text">Running Vending Machines Was Too Hard</span>
+            Our 
+            
+            <span className="gradient-text"> Story</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg md:mx-0">
-            Tracking sales in a notebook. Managing inventory in a spreadsheet. Calculating profit in your head. There had to be a better way — so we built one.
-          </p>
+            We didn't start out as tech experts. We started just like you—as new vending machine owners who didn’t know the first thing about the vending space.</p>
+<p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg md:mx-0">When we bought our first machine, we fell in love with the idea of building a semi-passive business. But we quickly realized that social media doesn't tell you the whole truth. Nobody mentioned the hours spent driving, the heavy lifting, the inventory expiring in the garage, or the nightmare of trying to track sales in a notebook and a messy spreadsheet.</p>
+<p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg md:mx-0">We looked everywhere for a tool that was simple, affordable, and built for beginners. Everything we found was either too expensive, built only for giant corporations, or incredibly outdated.</p>
+<p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg md:mx-0">So, we decided to build what we wish we had on day one.</p>
+<p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg md:mx-0">We built this app to take the guesswork out of vending. Whether you are placing your very first machine or scaling up to your tenth, we are here to help you skip the rookie mistakes, track your profits effortlessly, and actually enjoy the business you are building.</p>
+<p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg md:mx-0">Welcome to the smarter way to vend.</p>
         </div>
 
         <div className="relative z-10 mx-auto w-full max-w-[700px]">
