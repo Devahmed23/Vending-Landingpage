@@ -208,12 +208,20 @@ export default function PricingPage() {
             </p>
           </FadeIn>
 
-          <FadeIn direction="right" delay={0.1} className="relative z-10 mx-auto w-full max-w-[700px]">
-            <div className="absolute -inset-6 rounded-full bg-gradient-to-br from-[#1583F1]/15 via-[#81E8C4]/10 to-transparent blur-3xl" />
-            <div className="relative overflow-hidden rounded-3xl border border-white/60 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.12)] h-56 md:h-[320px]">
-              {/* Kept existing decorative blur circles: left intentionally blank for pricing visual */}
-            </div>
-          </FadeIn>
+           <div className="relative z-10 mx-auto w-full max-w-[700px]">
+                    <div className="absolute -inset-6 rounded-full bg-gradient-to-br from-[#1583F1]/15 via-[#81E8C4]/10 to-transparent blur-3xl" />
+                    <div className="relative overflow-hidden rounded-3xl border border-white/60 ">
+                      <Image
+                        src="/pricing.png"
+                        alt="VendSavvy dashboard mockup"
+                        width={1200}
+                        height={900}
+                        priority
+                        sizes="(min-width: 1024px) 700px, (min-width: 768px) 56vw, 100vw"
+                        className="h-auto w-full object-cover"
+                      />
+                    </div>
+                  </div>
         </div>
       </section>
 
