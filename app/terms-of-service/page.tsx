@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
@@ -6,7 +7,7 @@ export default function TermsOfServicePage() {
     <>
       <Navbar />
 
-      <main className="min-h-screen bg-gradient-to-b from-[#f7fbff] to-[#eef8f7] pt-32 pb-24 px-6">
+      <main id="top" className="min-h-screen bg-gradient-to-b from-[#f7fbff] to-[#eef8f7] pt-32 pb-24 px-6">
         <div className="max-w-5xl mx-auto">
 
           {/* TOP BADGE */}
@@ -20,7 +21,7 @@ export default function TermsOfServicePage() {
           </h1>
 
           <p className="text-lg text-gray-500 max-w-3xl leading-8 mb-14">
-           Welcome to Vend Savvy. These Terms of Service (“Terms”) govern your access to and use of the Vend Savvy platform, including all features, dashboards, reports, and services provided.
+           Welcome to Vend Savvy LLC. These Terms of Service (“Terms”) govern your access to and use of the Vend Savvy LLC platform, including all features, dashboards, reports, and services provided.
           </p>
 
           {/* CARD */}
@@ -34,7 +35,7 @@ export default function TermsOfServicePage() {
                 </h2>
 
                 <p className="text-gray-600 leading-8">
-                  By accessing or using Vend Savvy, you agree to be legally bound by these Terms. If you do not agree, you must not use the platform.
+                  By accessing or using Vend Savvy LLC, you agree to be legally bound by these Terms. If you do not agree, you must not use the platform.
                 </p>
               </section>
 
@@ -54,7 +55,7 @@ export default function TermsOfServicePage() {
                 </h2>
 
                 <p className="text-gray-600 leading-8">
-                  Vend Savvy provides a SaaS platform that allows users to manage vending operations, track revenue and expenses, monitor inventory, generate financial reports, and manage vendor/property relationships. You agree to use the platform only for lawful business purposes. 
+                  Vend Savvy LLC provides a SaaS platform that allows users to manage vending operations, track revenue and expenses, monitor inventory, generate financial reports, and manage vendor/property relationships. You agree to use the platform only for lawful business purposes. 
                 </p>
               </section>
               <section>
@@ -78,7 +79,7 @@ export default function TermsOfServicePage() {
                   By subscribing, you agree to pay all applicable fees.
                 </p>
                 <ul className="space-y-3 text-gray-600 leading-8 list-disc pl-6">
-                  <li>Vend Savvy operates on a subscription-based model.</li>
+                  <li>Vend Savvy LLC operates on a subscription-based model.</li>
                   <li>Fees are billed on a recurring basis (monthly or annually).</li>
                   <li>Failure to pay may result in suspension or termination.</li>
                   <li> Pricing may change with prior notice.</li>              
@@ -107,7 +108,7 @@ export default function TermsOfServicePage() {
                 </h2>
 
                 <p className="text-gray-600 leading-8">
-                  While Vend Savvy strives to provide accurate and reliable financial reports, calculations, and summaries, these outputs are dependent on the accuracy of the data you provide. Vend Savvy disclaims any liability arising from errors, omissions, or inaccuracies in data entered by you. 
+                  While Vend Savvy LLC strives to provide accurate and reliable financial reports, calculations, and summaries, these outputs are dependent on the accuracy of the data you provide. Vend Savvy LLC disclaims any liability arising from errors, omissions, or inaccuracies in data entered by you. 
                 </p>
               </section>
 
@@ -118,7 +119,7 @@ export default function TermsOfServicePage() {
                 
                 <ul className="space-y-3 text-gray-600 leading-8 list-disc pl-6">
                   <li>You retain ownership of your data. </li>
-                  <li>You grant Vend Savvy permission to process and store your data to provide the Service.</li>
+                  <li>You grant Vend Savvy LLC permission to process and store your data to provide the Service.</li>
                   <li>We may use aggregated, anonymized data for analytics and improvements. </li>
                  
                 </ul>
@@ -130,7 +131,7 @@ export default function TermsOfServicePage() {
                 </h2>
 
                 <p className="text-gray-600 leading-8">
-                  Vend Savvy provides tools for tracking and reporting financial data. We do not guarantee accuracy of reports if incorrect data is entered. The platform does not provide financial, legal, or tax advice. 
+                  Vend Savvy LLC provides tools for tracking and reporting financial data. We do not guarantee accuracy of reports if incorrect data is entered. The platform does not provide financial, legal, or tax advice. 
                 </p>
               </section>
 
@@ -140,7 +141,7 @@ export default function TermsOfServicePage() {
                 </h2>
 
                 <p className="text-gray-600 leading-8">
-                  Vend Savvy may integrate with third-party services (e.g., payment processors). We are not responsible for third-party performance or policies. 
+                  Vend Savvy LLC may integrate with third-party services (e.g., payment processors). We are not responsible for third-party performance or policies. 
                 </p>
               </section>
 
@@ -150,7 +151,7 @@ export default function TermsOfServicePage() {
                 </h2>
 
                 <p className="text-gray-600 leading-8">
-                  All platform content, software, and branding are owned by Vend Savvy. You may not copy, distribute, or reverse engineer any part of the Service. 
+                  All platform content, software, and branding are owned by Vend Savvy LLC. You may not copy, distribute, or reverse engineer any part of the Service. 
                 </p>
               </section>
 
@@ -163,7 +164,7 @@ export default function TermsOfServicePage() {
                  To the maximum extent permitted by law: 
                 </p>
                 <ul className="space-y-3 text-gray-600 leading-8 list-disc pl-6">
-                  <li>Vend Savvy is not liable for indirect, incidental, or consequential damages</li>
+                  <li>Vend Savvy LLC is not liable for indirect, incidental, or consequential damages</li>
                   <li>We are not responsible for business losses, lost profits, or data inaccuracies </li>
                                   
                 </ul>
@@ -175,7 +176,7 @@ export default function TermsOfServicePage() {
                 </h2>
 
                 <p className="text-gray-600 leading-8">
-                  You agree to indemnify and hold harmless Vend Savvy from any claims, damages, or liabilities arising from your use of the platform or violation of these Terms.
+                  You agree to indemnify and hold harmless Vend Savvy LLC from any claims, damages, or liabilities arising from your use of the platform or violation of these Terms.
                 </p>
               </section>
 
@@ -185,7 +186,7 @@ export default function TermsOfServicePage() {
                 </h2>
 
                 <p className="text-gray-600 leading-8">
-                  Vend Savvy reserves the right to suspend or terminate your account at its sole discretion, with or without notice, for reasons including but not limited to: 
+                  Vend Savvy LLC reserves the right to suspend or terminate your account at its sole discretion, with or without notice, for reasons including but not limited to: 
                 </p>
                 <ul className="space-y-3 text-gray-600 leading-8 list-disc pl-6 mb-4">
                   <li>Violation of Terms of Service or Privacy Policy  </li>
@@ -202,14 +203,14 @@ export default function TermsOfServicePage() {
                   <li>Users remain responsible for any outstanding charges incurred prior to termination</li>                           
                 </ul>
                 <p className="text-gray-600 leading-8 mb-4">
-                  Upon termination, your access to Vend Savvy services will cease. Vend Savvy may retain your data for legal or regulatory purposes. Any unpaid fees will remain due and payable. Users are responsible for exporting or saving any data prior to termination.  
+                  Upon termination, your access to Vend Savvy LLC services will cease. Vend Savvy LLC may retain your data for legal or regulatory purposes. Any unpaid fees will remain due and payable. Users are responsible for exporting or saving any data prior to termination.  
                 </p>
                 <strong className="text-black">
       Reactivation
     </strong>
      <ul className="space-y-3 text-gray-600 leading-8 list-disc pl-6 mb-4">
                   <li>Users may reactivate terminated accounts by resubscribing, subject to availability and updated terms  </li>
-                  <li>Previously saved data may not be restored unless Vend Savvy specifically permits</li>                           
+                  <li>Previously saved data may not be restored unless Vend Savvy LLC specifically permits</li>                           
                 </ul>
               </section>
                <section>
@@ -221,20 +222,20 @@ export default function TermsOfServicePage() {
                   You may cancel your subscription at any time by accessing the subscription settings in your account. Cancellation will terminate future billing but will not entitle you to a refund of fees already paid except as expressly provided in the Refund Policyt. 
                 </p>
                 <p className="text-gray-600 leading-8 mb-4">
-                 Vend Savvy reserves the right to cancel or suspend your subscription at its sole discretion for non-payment, violations of the Terms of Service, or illegal activity. 
+                 Vend Savvy LLC reserves the right to cancel or suspend your subscription at its sole discretion for non-payment, violations of the Terms of Service, or illegal activity. 
                 </p>
                 <p className="text-gray-600 leading-8 mb-4">
                  Subscription cancellations are effective at the end of the current billing cycle. No prorated refunds will be issued for partial periods unless eligible under the Refund Policy. Users are responsible for completing cancellation before the next billing date to avoid additional charges.  
                 </p>
                  <p className="text-gray-600 leading-8 mb-4">
-                 After cancellation, access to Vend Savvy services will remain until the end of the current billing period. Vend Savvy may retain your data for legal, tax, or audit purposes. Users are responsible for exporting any important information prior to cancellation.  
+                 After cancellation, access to Vend Savvy LLC services will remain until the end of the current billing period. Vend Savvy LLC may retain your data for legal, tax, or audit purposes. Users are responsible for exporting any important information prior to cancellation.  
                 </p>
                 <strong className="text-black">
       Important Disclaimers 
     </strong>
      <ul className="space-y-3 text-gray-600 leading-8 list-disc pl-6 mb-4">
                   <li>Cancellation does not absolve users from outstanding charges</li>
-                  <li>Vend Savvy is not responsible for data loss after cancellation</li>
+                  <li>Vend Savvy LLC is not responsible for data loss after cancellation</li>
                   <li>Refunds are subject to the conditions outlined in the Refund Policy</li>                           
                 </ul>
               </section>
@@ -244,7 +245,7 @@ export default function TermsOfServicePage() {
                 </h2>
 
                 <p className="text-gray-600 leading-8">
-                  Refunds are eligible only for subscriptions that have not been actively used within two (2) months of payment. Active use is defined as any login or entry of data into the Vend Savvy platform, including but not limited to sales, expenses, machines, locations, or reports 
+                  Refunds are eligible only for subscriptions that have not been actively used within two (2) months of payment. Active use is defined as any login or entry of data into the Vend Savvy LLC platform, including but not limited to sales, expenses, machines, locations, or reports 
 
 Usage includes any of the following:
                 </p>
@@ -301,7 +302,7 @@ Usage includes any of the following:
                 </h2>
 
                 <p className="text-gray-600 leading-8">
-                 For questions, contact: [support@vendsavvy.com] 
+                 For questions, contact: [support@vendingsavvy.com] 
                 </p>
               </section>
 
@@ -311,18 +312,14 @@ Usage includes any of the following:
                 </h2>
 
                 <p className="text-gray-600 leading-8">
-                 By creating an account, checking the acceptance box, or using Vend Savvy, you acknowledge that you have read, understood, and agree to these Terms of Service. 
+                 By creating an account, checking the acceptance box, or using Vend Savvy LLC, you acknowledge that you have read, understood, and agree to these Terms of Service. 
                 </p>
               </section>
                 <div className="mt-12 flex flex-col sm:flex-row gap-4">
   
-  <button className="rounded-full bg-cyan-500 hover:bg-cyan-600 transition-colors text-white px-8 py-3 font-medium">
-    Accept Terms
-  </button>
-
-  <button className="rounded-full border border-cyan-200 hover:border-cyan-400 transition-colors px-8 py-3 font-medium text-black">
-    Decline
-  </button>
+  <Link href="#top" className="rounded-full bg-cyan-500 hover:bg-cyan-600 transition-colors text-white px-8 py-3 font-medium text-center">
+    Back to Top
+  </Link>
 
 </div>
 

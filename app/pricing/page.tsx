@@ -35,8 +35,8 @@ const plans = [
     name: 'Starter',
     price: '$49.99',
     period: '/month',
-    description: 'Perfect for solo operators running a small fleet.',
-    machines: 'Up to 5 machines',
+    description: 'Perfect for solo operators running up to 10 machines.',
+    machines: 'Up to 10 machines',
     highlight: false,
     cta: 'Get Starter',
     features: {
@@ -56,8 +56,8 @@ const plans = [
     name: 'Growth',
     price: '$89.99',
     period: '/month',
-    description: 'For operators scaling up to 20 machines.',
-    machines: '6–20 machines',
+    description: 'For operators scaling up to 50 machines.',
+    machines: 'Up to 50 machines',
     highlight: true,
     cta: 'Get Growth',
     features: {
@@ -77,8 +77,8 @@ const plans = [
     name: 'Pro',
     price: '$149.99',
     period: '/month',
-    description: 'For serious operators running large-scale operations.',
-    machines: '21–75 machines',
+    description: 'For serious operators running large-scale operations up to 100 machines.',
+    machines: 'Up to 100 machines',
     highlight: false,
     cta: 'Get Pro',
     features: {
@@ -112,73 +112,63 @@ const featureKeys = [
 const comparisonRows = [
   {
     feature: 'Sales Tracking',
-    trial: true,
     starter: true,
     growth: true,
     pro: true,
   },
   {
     feature: 'Inventory Management',
-    trial: true,
     starter: true,
     growth: true,
     pro: true,
   },
   {
     feature: 'Expense Tracking',
-    trial: true,
     starter: true,
     growth: true,
     pro: true,
   },
   {
     feature: 'Profit & Loss Reports',
-    trial: true,
     starter: true,
     growth: true,
     pro: true,
   },
   {
     feature: 'Smart Alerts',
-    trial: true,
     starter: true,
     growth: true,
     pro: true,
   },
   {
     feature: 'Mobile App Access',
-    trial: true,
     starter: true,
     growth: true,
     pro: true,
   },
   {
     feature: 'Priority Support',
-    trial: '—',
     starter: 'Basic',
     growth: 'Priority',
     pro: 'Premium',
   },
   {
     feature: 'Advanced Analytics',
-    trial: true,
     starter: true,
     growth: true,
     pro: true,
   },
   {
     feature: 'API / Integrations',
-    trial: true,
     starter: true,
     growth: true,
     pro: true,
   },
   {
     feature: 'Machine Capacity',
-    trial: 'Up to 5',
-    starter: 'Up to 5',
-    growth: '6 to 20',
-    pro: '21-75+',
+    starter: 'Up to 10',
+    growth: 'Up to 50',
+    pro: 'Up to 100',
   },
 ];
 
@@ -204,7 +194,7 @@ export default function PricingPage() {
               <span className="gradient-text">Transparent Pricing</span>
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg md:mx-0">
-              VendSavvy was designed to make professional vending management accessible for operators at every stage—whether you manage a few machines or a growing multi-location operation. 
+              VendSavvy LLC was designed to make professional vending management accessible for operators at every stage—whether you manage a few machines or a growing multi-location operation. 
             </p>
           </FadeIn>
 
@@ -213,7 +203,7 @@ export default function PricingPage() {
                     <div className="relative overflow-hidden rounded-3xl border border-white/60 ">
                       <Image
                         src="/pricing.png"
-                        alt="VendSavvy dashboard mockup"
+                        alt="VendSavvy LLC dashboard mockup"
                         width={1200}
                         height={900}
                         priority
@@ -230,16 +220,16 @@ export default function PricingPage() {
         <div className="max-w-6xl mx-auto">
           <m.div className="rounded-2xl p-6 md:p-8 lg:p-10 bg-gradient-to-br from-[#F0FAFF] to-white border border-[#E6F3FF] shadow-lg flex flex-col md:flex-row items-start gap-6">
             <div className="md:flex-1">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">Start Free. Grow on Your Terms.</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">Start a 30-Day Free Trial</h2>
               <p className="text-foreground/75 leading-relaxed mb-3">
                 Every plan includes full access to the platform with no hidden fees or complicated contracts. Pricing scales based only on the number of machines you manage, so you can grow your business without paying for features you don’t use.
               </p>
               <p className="text-foreground/70 leading-relaxed mb-4">
-                Start with a free 30-day trial—no credit card required—and experience a simpler, more organized way to run your vending business. After your trial ends, your selected plan will continue automatically based on your chosen machine tier. You can upgrade, adjust, or cancel at any time.
+                Start with a 30-day free trial—no credit card required—and experience a simpler, more organized way to run your vending business. After your trial ends, your selected plan will continue automatically based on your chosen machine tier. You can upgrade, adjust, or cancel at any time.
               </p>
               <div className="flex items-center gap-3 mb-6">
                 <Link href="/signup">
-                  <Button size="lg">Start Free 30-Day Trial</Button>
+                  <Button size="lg">Start 30-Day Free Trial</Button>
                 </Link>
                 <Button asChild variant="link">
                   <Link href="#compare">Compare Plans</Link>
@@ -259,7 +249,7 @@ export default function PricingPage() {
 
             <div className="md:w-80 lg:w-96 flex-shrink-0">
               <div className="rounded-xl overflow-hidden shadow-xl">
-                <Image src="/mockup.png" alt="VendSavvy app mockup" width={420} height={300} className="object-cover" />
+                <Image src="/mockup.png" alt="VendSavvy LLC app mockup" width={420} height={300} className="object-cover" />
               </div>
             </div>
           </m.div>
@@ -337,12 +327,12 @@ export default function PricingPage() {
                 <thead>
                   <tr className="border-b border-border bg-foreground/5">
                     <th className="text-left py-4 px-6 font-semibold">Feature</th>
-                    {plans.map((plan) => (
+                    {plans.filter((plan) => plan.name !== 'Free Trial').map((plan) => (
                       <th
                         key={plan.name}
                         className={`py-4 px-4 font-semibold text-center ${plan.highlight ? 'text-primary' : ''}`}
                       >
-                        {plan.name === 'Free Trial' ? 'Trial' : plan.name}
+                        {plan.name}
                       </th>
                     ))}
                   </tr>
@@ -351,7 +341,7 @@ export default function PricingPage() {
                   {comparisonRows.map((row, idx) => (
                     <tr key={row.feature} className={idx % 2 === 0 ? 'bg-background' : 'bg-foreground/[0.02]'}>
                       <td className="py-3 px-6 text-foreground/80">{row.feature}</td>
-                      {['trial', 'starter', 'growth', 'pro'].map((planKey, planIndex) => {
+                      {['starter', 'growth', 'pro'].map((planKey, planIndex) => {
                         const value = row[planKey as keyof typeof row];
                         const isBoolean = typeof value === 'boolean';
 
@@ -371,7 +361,7 @@ export default function PricingPage() {
                                 <X className="w-4 h-4 text-foreground/20 mx-auto" />
                               )
                             ) : (
-                              <span className={planKey === 'trial' ? 'text-foreground/70' : 'text-foreground/80'}>{value}</span>
+                              <span className="text-foreground/80">{value}</span>
                             )}
                           </td>
                         );
@@ -380,9 +370,9 @@ export default function PricingPage() {
                   ))}
                   <tr className="border-t border-border bg-foreground/5">
                     <td className="py-4 px-6 font-semibold">Machine Limit</td>
-                    {plans.map((plan) => (
+                    {plans.filter((plan) => plan.name !== 'Free Trial').map((plan) => (
                       <td key={plan.name} className="py-4 px-4 text-center text-xs text-foreground/70">
-                        {plan.name === 'Free Trial' ? 'Up to 5' : plan.machines}
+                        {plan.machines}
                       </td>
                     ))}
                   </tr>
@@ -401,7 +391,7 @@ export default function PricingPage() {
             <div className="absolute top-0 right-0 w-56 h-56 bg-white/10 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-44 h-44 bg-[#81E8C4]/20 rounded-full blur-3xl pointer-events-none" />
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white relative">
-              Start Free — No Credit Card Needed
+              30 day free trial — No Credit Card Needed
             </h2>
             <p className="text-white/80 mb-8 relative">28 days of full access. No commitments. Cancel anytime.</p>
             <m.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }} className="inline-block relative">

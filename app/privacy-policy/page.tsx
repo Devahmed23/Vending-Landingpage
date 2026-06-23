@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
@@ -6,7 +7,7 @@ export default function PrivacyPolicyPage() {
     <>
       <Navbar />
 
-      <main className="min-h-screen bg-gradient-to-b from-[#f7fbff] to-[#eef8f7] pt-32 pb-24 px-6">
+      <main id="top" className="min-h-screen bg-gradient-to-b from-[#f7fbff] to-[#eef8f7] pt-32 pb-24 px-6">
         <div className="max-w-5xl mx-auto">
 
           {/* TOP BADGE */}
@@ -21,7 +22,7 @@ export default function PrivacyPolicyPage() {
 
           <p className="text-lg text-gray-500 max-w-3xl leading-8 mb-14">
             Your privacy matters to us. This page explains how
-            Vend Savvy collects, uses, and protects your information.
+            Vend Savvy LLC collects, uses, and protects your information.
           </p>
 
           {/* CARD */}
@@ -35,7 +36,7 @@ export default function PrivacyPolicyPage() {
                 </h2>
 
                 <p className="text-gray-600 leading-8">
-                 We collect personal information (name, email, business info) and operational data (sales, expenses, inventory).  By using Vend Savvy, you acknowledge and agree that we may collect personal, business, and technical information necessary to provide our services effectively. 
+                 We collect personal information (name, email, business info) and operational data (sales, expenses, inventory).  By using Vend Savvy LLC, you acknowledge and agree that we may collect personal, business, and technical information necessary to provide our services effectively. 
 
                 </p>
               </section>
@@ -48,7 +49,7 @@ export default function PrivacyPolicyPage() {
                  Your data is used to provide dashboards, financial reports, analytics, and platform functionality. 
                 </p>
                 <p className="text-gray-600 leading-8">
-                 Vend Savvy uses collected information for the following purposes: 
+                 Vend Savvy LLC uses collected information for the following purposes: 
                 </p>
 
                 <ul className="space-y-3 text-gray-600 leading-8 list-disc pl-6">
@@ -103,7 +104,7 @@ export default function PrivacyPolicyPage() {
                 </h2>
 
                 <p className="text-gray-600 leading-8">
-                 Vend Savvy implements reasonable administrative, technical, and physical safeguards to protect your information. However, no system is completely secure, and we cannot guarantee absolute security 
+                 Vend Savvy LLC implements reasonable administrative, technical, and physical safeguards to protect your information. However, no system is completely secure, and we cannot guarantee absolute security 
 
                 </p>
               </section>
@@ -114,7 +115,7 @@ export default function PrivacyPolicyPage() {
                 </h2>
 
                 <p className="text-gray-600 leading-8">
-                 You may update or delete your information at any time through your account settings. You may access, update, or request deletion of your data in accordance with applicable laws. Vend Savvy reserves the right to retain certain information for legal, tax, or auditing purposes. 
+                 You may update or delete your information at any time through your account settings. You may access, update, or request deletion of your data in accordance with applicable laws. Vend Savvy LLC reserves the right to retain certain information for legal, tax, or auditing purposes. 
 
                 </p>
               </section>
@@ -125,7 +126,7 @@ export default function PrivacyPolicyPage() {
                 </h2>
 
                 <p className="text-gray-600 leading-8">
-                  We may use cookies and analytics tools to improve user experience. By using Vend Savvy, you acknowledge that we may use cookies and similar technologies to monitor usage and improve functionality. You may manage cookie preferences through your browser settings.
+                  We may use cookies and analytics tools to improve user experience. By using Vend Savvy LLC, you acknowledge that we may use cookies and similar technologies to monitor usage and improve functionality. You may manage cookie preferences through your browser settings.
                 </p>
               </section>
 
@@ -135,7 +136,7 @@ export default function PrivacyPolicyPage() {
                 </h2>
 
                 <p className="text-gray-600 leading-8">
-                  Vend Savvy may modify this Privacy Acknowledgement from time to time. Your continued use of the platform constitutes acceptance of any changes.
+                  Vend Savvy LLC may modify this Privacy Acknowledgement from time to time. Your continued use of the platform constitutes acceptance of any changes.
                 </p>
               </section>
 
@@ -145,18 +146,14 @@ export default function PrivacyPolicyPage() {
                 </h2>
 
                 <p className="text-gray-600 leading-8">
-                  By accessing or using Vend Savvy, you acknowledge that you have read, understood, and agree to this Privacy Acknowledgement, and consent to the collection, use, storage, and disclosure of your information as described herein. 
+                  By accessing or using Vend Savvy LLC, you acknowledge that you have read, understood, and agree to this Privacy Acknowledgement, and consent to the collection, use, storage, and disclosure of your information as described herein. 
                 </p>
               </section>
               <div className="mt-12 flex flex-col sm:flex-row gap-4">
   
-  <button className="rounded-full bg-cyan-500 hover:bg-cyan-600 transition-colors text-white px-8 py-3 font-medium">
-    Accept Terms
-  </button>
-
-  <button className="rounded-full border border-cyan-200 hover:border-cyan-400 transition-colors px-8 py-3 font-medium text-black">
-    Decline
-  </button>
+  <Link href="#top" className="rounded-full bg-cyan-500 hover:bg-cyan-600 transition-colors text-white px-8 py-3 font-medium text-center">
+    Back to Top
+  </Link>
 
 </div>
 

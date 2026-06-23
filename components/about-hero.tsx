@@ -33,7 +33,7 @@ export function AboutHero() {
           <div className="relative overflow-hidden rounded-3xl border border-white/60 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.12)]">
             <Image
               src="/aboutus.png"
-              alt="VendSavvy dashboard mockup"
+              alt="VendSavvy LLC dashboard mockup"
               width={1200}
               height={900}
               priority

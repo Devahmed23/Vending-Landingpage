@@ -19,7 +19,7 @@ const reviews: Review[] = [
     id: 'r1',
     name: 'Jasmine Cole',
     title: 'Route Manager',
-    text: 'VendSavvy cut my route time in half — inventory tracking is effortless and the reports actually help me make money.',
+    text: 'VendSavvy LLC cut my route time in half — inventory tracking is effortless and the reports actually help me make money.',
     rating: 5,
     avatar: '/avatars/photo-1438761681033-6461ffad8d80.avif',
   },
@@ -98,7 +98,7 @@ export default function Reviews() {
         <div className="text-center mb-10">
           <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">Trusted by operators</p>
           <h2 className="text-3xl md:text-4xl font-bold">What our customers say</h2>
-          <p className="text-foreground/60 max-w-2xl mx-auto mt-3">Real feedback from route managers and vending operators using VendSavvy.</p>
+          <p className="text-foreground/60 max-w-2xl mx-auto mt-3">Real feedback from route managers and vending operators using VendSavvy LLC.</p>
         </div>
 
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">

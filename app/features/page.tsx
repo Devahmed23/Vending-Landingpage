@@ -158,7 +158,7 @@ export default function FeaturesPage() {
             </h1>
 
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg md:mx-0">
-              VendSavvy brings sales tracking, inventory, expenses, and reporting into one powerful platform.
+              VendSavvy LLC brings sales tracking, inventory, expenses, and reporting into one powerful platform.
             </p>
 
             <div className="mt-6">
@@ -175,7 +175,7 @@ export default function FeaturesPage() {
                    <div className="relative overflow-hidden rounded-3xl border border-white/60 bg-">
                      <Image
                        src="/feature.png"
-                       alt="VendSavvy dashboard mockup"
+                       alt="VendSavvy LLC dashboard mockup"
                        width={1200}
                        height={900}
                        priority
@@ -215,7 +215,7 @@ export default function FeaturesPage() {
                   Built for <span className="bg-gradient-to-r from-[#1583F1] via-[#1270D0] to-[#81E8C4] bg-clip-text text-transparent">Every Type</span> of Vending Operation
                 </h2>
                 <p className="text-lg md:text-xl text-foreground/70 leading-relaxed mb-8 max-w-3xl mx-auto">
-                  No two vending businesses operate the same way. VendSavvy adapts to <span className="font-semibold text-foreground/85">your operation</span>, not the other way around.
+                  No two vending businesses operate the same way. VendSavvy LLC adapts to <span className="font-semibold text-foreground/85">your operation</span>, not the other way around.
                 </p>
               </FadeIn>
             </div>
@@ -255,7 +255,7 @@ export default function FeaturesPage() {
                       Core Philosophy
                     </h3>
                     <p className="text-base leading-relaxed text-foreground/70">
-                      VendSavvy is designed to adapt to your operation, not force your business into a rigid system. Every dashboard, report, and insight is tailored to how your business actually runs.
+                      VendSavvy LLC is designed to adapt to your operation, not force your business into a rigid system. Every dashboard, report, and insight is tailored to how your business actually runs.
                     </p>
                   </m.div>
 
@@ -271,7 +271,7 @@ export default function FeaturesPage() {
                   >
                     <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#1583F1]/10 to-transparent rounded-bl-full" />
                     <p className="text-base font-semibold text-foreground/85 italic relative z-10">
-                      "VendSavvy gives you a flexible system built around your operation—not a one-size-fits-all template."
+                      "VendSavvy LLC gives you a flexible system built around your operation—not a one-size-fits-all template."
                     </p>
                   </m.div>
                 </div>

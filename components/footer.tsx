@@ -8,8 +8,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <Image src="/logo.png" alt="VendSavvy" width={32} height={32} className="rounded-full" />
-              <span className="font-bold text-lg">VendSavvy</span>
+              <Image src="/logo.png" alt="VendSavvy LLC" width={32} height={32} className="rounded-full" />
+              <span className="font-bold text-lg">VendSavvy LLC</span>
             </div>
             <p className="text-sm text-foreground/60 max-w-xs">
               The all-in-one platform for vending machine operators to track sales, manage inventory, and grow their business.
@@ -46,7 +46,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-foreground/50">
-          <p>© 2025 VendSavvy. All rights reserved.</p>
+          <p>© 2025 VendSavvy LLC. All rights reserved.</p>
           <p>Built for vending operators who mean business.</p>
         </div>
       </div>

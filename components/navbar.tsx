@@ -11,7 +11,6 @@ const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'Features', href: '/features' },
   { label: 'Pricing', href: '/pricing' },
-  { label: 'Blogs', href: '/blogs' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -72,7 +71,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 flex-shrink-0">
           <Image src="/logo.png" alt="VendSavvy" width={40} height={40} className="rounded-full" />
-          <span className="font-bold text-lg gradient-text">VendSavvy</span>
+          <span className="font-bold text-lg gradient-text">Vend Savvy LLC</span>
         </Link>
 
         {/* Desktop Nav Links */}

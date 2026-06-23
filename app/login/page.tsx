@@ -23,9 +23,9 @@ export default function LoginPage() {
         {/* Logo and Title */}
         <div className="text-center mb-12">
           <div className="flex justify-center mb-6">
-            <Image src="/logo.png" alt="VendSavvy" width={80} height={80} className="rounded-full" />
+            <Image src="/logo.png" alt="VendSavvy LLC" width={80} height={80} className="rounded-full" />
           </div>
-          <h1 className="text-2xl font-bold mb-2">VENDING SAVVY</h1>
+          <h1 className="text-2xl font-bold mb-2">VENDING SAVVY LLC</h1>
           <p className="text-foreground/70">Your Vending, Your Way!</p>
         </div>
 
@@ -101,7 +101,7 @@ export default function LoginPage() {
 
         {/* Footer */}
         <p className="text-center text-xs text-foreground/50 mt-8">
-          © 2024 VendSavvy. All rights reserved.
+          © 2024 VendSavvy LLC. All rights reserved.
         </p>
       </div>
     </div>

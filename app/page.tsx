@@ -235,7 +235,7 @@ export default function LandingPage() {
                   <span className="w-2 h-2 rounded-full bg-[#1583F1] animate-pulse" />
                   <span className="text-foreground/70">Built for operators who want clarity, not clutter</span>
                 </m.div>
-                <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">Why Vend Savvy</p>
+                <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">Why Vend Savvy LLC</p>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight">
                   Everything Your Vending Business Needs
                 </h2>
@@ -350,7 +350,7 @@ export default function LandingPage() {
             <p className="text-white text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3">What We Do</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-white">Built around the daily reality of vending operations</h2>
             <p className="text-sm sm:text-base text-white/85 max-w-2xl mx-auto">
-              Vend Savvy helps operators manage machines, inventory, and financial performance in one connected workflow.
+              Vend Savvy LLC helps operators manage machines, inventory, and financial performance in one connected workflow.
             </p>
           </FadeIn>
 
@@ -364,15 +364,15 @@ export default function LandingPage() {
               <div className="absolute top-0 left-0 right-0 h-1 gradient-bg" />
               <div className="absolute -right-14 -top-14 w-36 h-36 rounded-full bg-[#1583F1]/8 blur-2xl" />
 
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5">Vend Savvy helps vending operators</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5">Vend Savvy LLC helps vending operators</h2>
               <p className="text-sm sm:text-base text-foreground/65 leading-relaxed mb-4">
-                Vend Savvy helps vending operators manage day-to-day operations with better visibility and stronger financial control.
+                Vend Savvy LLC helps vending operators manage day-to-day operations with better visibility and stronger financial control.
               </p>
               <div className="rounded-xl border border-[#1583F1]/25 bg-gradient-to-r from-[#1583F1]/8 to-[#81E8C4]/10 px-4 py-3 inline-block">
                 <p className="text-xs sm:text-sm font-semibold text-[#1270D0]">Whether you operate 5 machines or 500</p>
               </div>
               <p className="text-foreground/65 leading-relaxed mt-5">
-                Vend Savvy gives you a clear financial picture of your vending business.
+                Vend Savvy LLC gives you a clear financial picture of your vending business.
               </p>
               <div className="mt-7">
                 <Link href="/about">

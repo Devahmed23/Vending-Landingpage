@@ -20,19 +20,19 @@ const values = [
     icon: Heart,
     title: 'Operator-First',
     description:
-      'We listen to real vending operators — not assumptions. Our roadmap is driven by the people who use VendSavvy every day.',
+      'We listen to real vending operators — not assumptions. Our roadmap is driven by the people who use VendSavvy LLC every day.',
   },
   {
     icon: Zap,
     title: 'Simple by Design',
     description:
-      "No bloated dashboards, no steep learning curves. VendSavvy is powerful enough for a 75-machine operation, simple enough to use on day one.",
+      "No bloated dashboards, no steep learning curves. VendSavvy LLC is powerful enough for a 75-machine operation, simple enough to use on day one.",
   },
   {
     icon: Users,
     title: 'Built to Scale With You',
     description:
-      "Whether you're starting your first machine or growing to 50, VendSavvy grows with you — same platform, same simplicity.",
+      "Whether you're starting your first machine or growing to 50, VendSavvy LLC grows with you — same platform, same simplicity.",
   },
 ];
 
@@ -76,7 +76,7 @@ const targetAudience = [
   // },
   // {
   //   title: 'Multi-Industry Vendors',
-  //   description: 'Offices, schools, hospitals, gyms — wherever your machines are, VendSavvy has you covered.',
+  //   description: 'Offices, schools, hospitals, gyms — wherever your machines are, VendSavvy LLC has you covered.',
   // },
 ];
 
@@ -98,7 +98,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <FadeIn direction="left">
               <p className="text-lg font-semibold text-foreground/85 mb-6">
-                VendSavvy was created to solve a problem many vending operators face every day—running an entire business through spreadsheets, handwritten notes, disconnected apps, and guesswork. 
+                VendSavvy LLC was created to solve a problem many vending operators face every day—running an entire business through spreadsheets, handwritten notes, disconnected apps, and guesswork. 
               </p>
               <div className="space-y-5">
                 <div className="flex gap-4">
@@ -113,9 +113,9 @@ export default function AboutPage() {
                 <div className="flex gap-4">
                   <div className="w-2 h-2 rounded-full gradient-bg mt-2.5 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-foreground/90 mb-1">We built VendSavvy to change that. </p>
+                    <p className="font-semibold text-foreground/90 mb-1">We built VendSavvy LLC to change that. </p>
                     <p className="text-foreground/70">
-                      VendSavvy is a modern vending management platform designed specifically for vending operators who want more clarity, organization, and control over their business. Instead of piecing together multiple systems, operators can manage sales, inventory, expenses, machine performance, commissions, and reporting from one centralized platform. 
+                      VendSavvy LLC is a modern vending management platform designed specifically for vending operators who want more clarity, organization, and control over their business. Instead of piecing together multiple systems, operators can manage sales, inventory, expenses, machine performance, commissions, and reporting from one centralized platform. 
                     </p>
                   </div>
                 </div>
@@ -152,7 +152,7 @@ export default function AboutPage() {
                   </li>
                 </ul>
                 <p className="text-sm text-foreground/60 mt-4">
-                  Whether you operate a few machines or manage a growing multi-location vending business, VendSavvy helps simplify operations so you can focus less on operational chaos and more on growing a profitable business. 
+                  Whether you operate a few machines or manage a growing multi-location vending business, VendSavvy LLC helps simplify operations so you can focus less on operational chaos and more on growing a profitable business. 
                 </p>
               </m.div>
             </FadeIn>
@@ -173,7 +173,7 @@ export default function AboutPage() {
                 Our mission is to make professional vending management accessible to operators at every stage of growth.
               </p>
               <p className="text-foreground/70 leading-relaxed">
-                We believe vending businesses should have access to the same level of operational visibility, organization, and business intelligence used by large enterprise operators, without the complexity or cost of enterprise software. Whether you manage your first vending machine or operate a large multi-location network, VendSavvy is designed to give you the tools, insights, and structure needed to run a smarter, more profitable business. 
+                We believe vending businesses should have access to the same level of operational visibility, organization, and business intelligence used by large enterprise operators, without the complexity or cost of enterprise software. Whether you manage your first vending machine or operate a large multi-location network, VendSavvy LLC is designed to give you the tools, insights, and structure needed to run a smarter, more profitable business. 
               </p>
             </div>
           </FadeIn>
@@ -188,13 +188,13 @@ export default function AboutPage() {
               >
                 <blockquote className="text-xl font-medium text-foreground/80 italic leading-relaxed">
                   &ldquo;You shouldn&apos;t need a finance degree or a tech background to understand your vending
-                  business. You just need VendSavvy.&rdquo;
+                  business. You just need VendSavvy LLC.&rdquo;
                 </blockquote>
-                <p className="mt-6 text-sm font-semibold text-foreground/60">— The VendSavvy Team</p>
+                <p className="mt-6 text-sm font-semibold text-foreground/60">— The VendSavvy LLC Team</p>
               </m.div>
 
               <div className="rounded-2xl border border-[#E6F3FF] bg-[linear-gradient(135deg,rgba(21,131,241,0.06),rgba(129,232,196,0.08))] p-6 md:p-8 shadow-[0_18px_50px_rgba(15,23,42,0.06)]">
-                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#1270D0] mb-3">VendSavvy was built to help operators take control of their business by making it easier to:</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#1270D0] mb-3">VendSavvy LLC was built to help operators take control of their business by making it easier to:</p>
                 <ul className="list-disc list-inside space-y-2 text-foreground/70 leading-relaxed">
                   <li>Reduce manual tracking and paperwork</li>
                   <li>Understand true machine profitability</li>
@@ -247,9 +247,9 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <FadeIn direction="up" className="text-center mb-12">
             <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-3">Who It&apos;s For</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Who VendSavvy Is For</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Who VendSavvy LLC Is For</h2>
             <p className="text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-              VendSavvy is built for vending operators who want clarity at every stage. Whether you&apos;re launching your first machine or managing a larger route network, the platform helps you understand what is working, what needs attention, and where your profit is going.
+              VendSavvy LLC is built for vending operators who want clarity at every stage. Whether you&apos;re launching your first machine or managing a larger route network, the platform helps you understand what is working, what needs attention, and where your profit is going.
             </p>
           </FadeIn>
 
@@ -285,7 +285,7 @@ export default function AboutPage() {
 
                     <div className={`rounded-3xl border p-5 md:p-6 shadow-[0_14px_36px_rgba(15,23,42,0.06)] ${idx === 0 ? 'border-[#DCEEFF] bg-[linear-gradient(135deg,rgba(21,131,241,0.06),rgba(255,255,255,0.92))]' : 'border-[#D9F5EE] bg-[linear-gradient(135deg,rgba(75,191,176,0.06),rgba(255,255,255,0.92))]'}`}>
                       <div className="mb-4 flex items-center justify-between gap-3">
-                        <p className={`text-sm font-semibold uppercase tracking-[0.22em] ${idx === 0 ? 'text-[#1270D0]' : 'text-[#0E7C6E]'}`}>With VendSavvy, you can</p>
+                        <p className={`text-sm font-semibold uppercase tracking-[0.22em] ${idx === 0 ? 'text-[#1270D0]' : 'text-[#0E7C6E]'}`}>With VendSavvy LLC, you can</p>
                         <span className={`hidden sm:inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold ${idx === 0 ? 'bg-[#F3F9FF] text-[#1270D0]' : 'bg-[#F3FCF9] text-[#0E7C6E]'}`}>
                           Smart, clear, scalable
                         </span>
@@ -324,7 +324,7 @@ export default function AboutPage() {
               <p className="gradient-text text-sm font-semibold uppercase tracking-[0.28em] mb-4">Built to Grow With You</p>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">🚀 Built to Grow With You</h2>
               <p className="max-w-3xl mx-auto text-base md:text-lg leading-relaxed text-foreground/75">
-                Whether you&apos;re operating a handful of machines or scaling into a full vending network, VendSavvy gives you the structure and visibility needed to run a more profitable, controlled, and scalable operation.
+                Whether you&apos;re operating a handful of machines or scaling into a full vending network, VendSavvy LLC gives you the structure and visibility needed to run a more profitable, controlled, and scalable operation.
               </p>
               <div className="mt-6 inline-flex items-center rounded-full border border-[#1583F1]/15 bg-white/80 px-4 py-2 text-sm font-semibold text-[#1270D0] shadow-sm">
                 Track more. Know more. Earn more.
@@ -343,7 +343,7 @@ export default function AboutPage() {
             <div className="absolute bottom-0 left-0 w-44 h-44 bg-[#81E8C4]/20 rounded-full blur-3xl pointer-events-none" />
             <h2 className="text-3xl font-bold mb-4 text-white relative">Ready to Take Control of Your Business?</h2>
             <p className="text-white/80 mb-8 relative">
-              Join thousands of vending operators already using VendSavvy to manage and grow smarter.
+              Join thousands of vending operators already using VendSavvy LLC to manage and grow smarter.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center relative">
               <m.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">

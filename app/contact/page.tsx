@@ -13,7 +13,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email Us',
-    line1: 'support@vendsavvy.com',
+    line1: 'support@vendingsavvy.com',
     line2: 'We typically reply within 24 hours',
   },
   {
@@ -32,40 +32,40 @@ const contactInfo = [
 
 const faqs = [
   {
-    q: 'What is VendSavvy?',
-    a: 'VendSavvy is an all-in-one platform designed for vending machine operators to track sales, manage inventory, monitor expenses, and calculate profits across all machines and locations.',
+    q: 'What is VendSavvy LLC?',
+    a: 'VendSavvy LLC is an all-in-one platform designed for vending machine operators to track sales, manage inventory, monitor expenses, and calculate profits across all machines and locations.',
   },
   {
-    q: 'Who is VendSavvy for?',
-    a: 'VendSavvy is built for new vending machine owners, growing vending businesses, and operators managing multiple machines and locations.',
+    q: 'Who is VendSavvy LLC for?',
+    a: 'VendSavvy LLC is built for new vending machine owners, growing vending businesses, and operators managing multiple machines and locations.',
   },
   {
-    q: 'How does VendSavvy help me make more money?',
-    a: 'VendSavvy shows exactly how each machine and location is performing, helping you restock smarter, reduce waste, and focus on the most profitable machines.',
+    q: 'How does VendSavvy LLC help me make more money?',
+    a: 'VendSavvy LLC shows exactly how each machine and location is performing, helping you restock smarter, reduce waste, and focus on the most profitable machines.',
   },
   {
     q: 'Can I track multiple machines and locations?',
     a: 'Yes. You can manage all your machines, assign them to locations, and track performance individually or across your entire business.',
   },
   {
-    q: 'Does VendSavvy calculate commissions or rent for locations?',
-    a: 'Yes. VendSavvy automatically calculates what you owe each location based on commission percentages, flat rent, or hybrid agreements.',
+    q: 'Does VendSavvy LLC calculate commissions or rent for locations?',
+    a: 'Yes. VendSavvy LLC automatically calculates what you owe each location based on commission percentages, flat rent, or hybrid agreements.',
   },
   {
     q: 'Do I need special vending machines to use VendSavvy?',
-    a: 'No. VendSavvy works with any vending machine. You can enter data manually or connect supported devices for automatic tracking (coming soon).',
+    a: 'No. VendSavvy LLC works with any vending machine. You can enter data manually or connect supported devices for automatic tracking (coming soon).',
   },
   {
     q: 'Can I track inventory?',
-    a: 'Yes. VendSavvy helps you monitor product levels, track restocks, and avoid running out of high-selling items.',
+    a: 'Yes. VendSavvy LLC helps you monitor product levels, track restocks, and avoid running out of high-selling items.',
   },
   {
-    q: 'Does VendSavvy track expenses?',
+    q: 'Does VendSavvy LLC track expenses?',
     a: 'Yes. You can log expenses like gas, repairs, commissions, and other costs to get a full view of your profits.',
   },
   {
     q: 'What reports are included?',
-    a: 'VendSavvy includes profit and loss reports, sales by machine, location performance, and rental/commission settlement reports.',
+    a: 'VendSavvy LLC includes profit and loss reports, sales by machine, location performance, and rental/commission settlement reports.',
   },
   {
     q: 'Is there a free trial?',
@@ -73,7 +73,7 @@ const faqs = [
   },
   {
     q: 'How does pricing work?',
-    a: 'Pricing is based on the number of machines you manage: Starter (up to 5 machines), Growth (6–20 machines), and Pro (21–75 machines).',
+    a: 'Pricing is based on the number of machines you manage: Starter (up to 10 machines), Growth (up to 50 machines), and Pro (up to 100 machines).',
   },
   {
     q: 'Can I upgrade my plan later?',
@@ -81,19 +81,19 @@ const faqs = [
   },
   {
     q: 'Is my data secure?',
-    a: 'Yes. VendSavvy uses secure systems to protect your data and keep your business information private.',
+    a: 'Yes. VendSavvy LLC uses secure systems to protect your data and keep your business information private.',
   },
   {
-    q: 'Do I need accounting experience to use VendSavvy?',
-    a: 'No. VendSavvy is designed to be simple and easy to use, even if you have no accounting background.',
+    q: 'Do I need accounting experience to use VendSavvy LLC?',
+    a: 'No. VendSavvy LLC is designed to be simple and easy to use, even if you have no accounting background.',
   },
   {
-    q: 'Can I access VendSavvy on my phone?',
-    a: 'Yes. VendSavvy is mobile-friendly, so you can manage your business on the go.',
+    q: 'Can I access VendSavvy LLC on my phone?',
+    a: 'Yes. VendSavvy LLC is mobile-friendly, so you can manage your business on the go.',
   },
   {
     q: 'Why not just use spreadsheets?',
-    a: 'Spreadsheets are manual, time-consuming, and prone to errors. VendSavvy automates your tracking, calculations, and reporting to save time and help you make better decisions faster.',
+    a: 'Spreadsheets are manual, time-consuming, and prone to errors. VendSavvy LLC automates your tracking, calculations, and reporting to save time and help you make better decisions faster.',
   },
 ];
 
@@ -173,7 +173,7 @@ export default function ContactPage() {
           <p className="gradient-text text-sm font-semibold uppercase tracking-widest mb-4">Contact Us</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">We&apos;re <span className="gradient-text">Here to Help</span></h1>
           <p className="text-lg text-foreground/70 max-w-xl mx-auto">
-            Have a question, need support, or just want to talk to someone about VendSavvy? Reach out — we
+            Have a question, need support, or just want to talk to someone about VendSavvy LLC? Reach out — we
             respond within 24 hours.
           </p>
         </FadeIn>
