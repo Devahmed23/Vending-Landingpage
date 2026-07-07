@@ -467,7 +467,7 @@ export default function LandingPage() {
                 </Button>
               </Link>
             </div>
-            <p className="text-white/50 text-xs mt-6">No credit card required · Cancel anytime · 28 days free</p>
+            <p className="text-white/50 text-xs mt-6">No credit card required · Cancel anytime · 30 days free</p>
           </div>
         </ScaleIn>
       </section>

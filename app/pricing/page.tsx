@@ -393,7 +393,7 @@ export default function PricingPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white relative">
               30 day free trial — No Credit Card Needed
             </h2>
-            <p className="text-white/80 mb-8 relative">28 days of full access. No commitments. Cancel anytime.</p>
+            <p className="text-white/80 mb-8 relative">30 days of full access. No commitments. Cancel anytime.</p>
             <m.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }} className="inline-block relative">
               <Link href="/signup">
                 <Button size="lg" variant="cta">

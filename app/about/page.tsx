@@ -349,7 +349,7 @@ export default function AboutPage() {
               <m.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
                 <Link href="/signup">
                   <Button size="lg" variant="cta" className="w-full sm:w-auto">
-                    Start Free 28-Day Trial
+                    Start Free 30-Day Trial
                   </Button>
                 </Link>
               </m.div>

@@ -69,7 +69,7 @@ const faqs = [
   },
   {
     q: 'Is there a free trial?',
-    a: 'Yes. All plans include a 28-day free trial so you can explore the platform risk-free.',
+    a: 'Yes. All plans include a 30-day free trial so you can explore the platform risk-free.',
   },
   {
     q: 'How does pricing work?',

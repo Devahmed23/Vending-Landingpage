@@ -164,7 +164,7 @@ export default function FeaturesPage() {
             <div className="mt-6">
               <m.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
                 <Link href="/signup">
-                  <Button size="lg">Start Free 28-Day Trial</Button>
+                  <Button size="lg">Start Free 30-Day Trial</Button>
                 </Link>
               </m.div>
             </div>
