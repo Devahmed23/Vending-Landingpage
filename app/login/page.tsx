@@ -25,7 +25,7 @@ export default function LoginPage() {
           <div className="flex justify-center mb-6">
             <Image src="/logo.png" alt="VendSavvy LLC" width={80} height={80} className="rounded-full" />
           </div>
-          <h1 className="text-2xl font-bold mb-2">VENDING SAVVY LLC</h1>
+          <h1 className="text-2xl font-bold mb-2">VEND SAVVY LLC</h1>
           <p className="text-foreground/70">Your Vending, Your Way!</p>
         </div>
 
