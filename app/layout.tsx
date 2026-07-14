@@ -43,6 +43,7 @@ export default function RootLayout({
           {children}
         </MotionProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
+        <SpeedInsights />
       </body>
     </html>
   )
